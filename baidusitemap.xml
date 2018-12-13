@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.60points.com/hexo_share_to_wechat/</loc>
+    <lastmod>2018-12-13T22:11:46.973Z</lastmod>
+  </url>  <url>
     <loc>https://www.60points.com/Hexo_flow/</loc>
     <lastmod>2018-12-13T21:45:13.576Z</lastmod>
   </url>  <url>
@@ -24,9 +27,6 @@
   </url>  <url>
     <loc>https://www.60points.com/python-print-heart/</loc>
     <lastmod>2018-11-26T13:43:42.180Z</lastmod>
-  </url>  <url>
-    <loc>https://www.60points.com/hexo_share_to_wechat/</loc>
-    <lastmod>2018-11-25T13:47:12.785Z</lastmod>
   </url>  <url>
     <loc>https://www.60points.com/Hexo_click_change_text/</loc>
     <lastmod>2018-11-25T13:45:52.912Z</lastmod>
