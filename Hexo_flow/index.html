@@ -538,7 +538,7 @@
 <p>最后一步修改<strong>根目录的_config.yml</strong>，把external_link的值改为false，默认的为true，这一步绝大多数教程中都没有写。</p>
 <p>mermaid画流程图<br>示例代码</p>
 <blockquote>
-<p>```mermaid<br>graph TD;<br>   起床–&gt;洗漱;<br>   洗漱–&gt;吃早餐;<br>   洗漱–&gt;不吃早餐;<br>   吃早餐–&gt;出门;<br>   不吃早餐–&gt;出门;<br>```  </p>
+<p>```mermaid<br>graph TD;<br>   起床—&gt;洗漱;<br>   洗漱—&gt;吃早餐;<br>   洗漱—&gt;不吃早餐;<br>   吃早餐—&gt;出门;<br>   不吃早餐—&gt;出门;<br>```  </p>
 </blockquote>
 <p>效果如下</p>
 <pre class="mermaid">graph TD;
@@ -551,7 +551,7 @@
 <h2 id="flow"><a href="#flow" class="headerlink" title="flow"></a>flow</h2><p>安装代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-filter-flowchart</span><br></pre></td></tr></table></figure></p>
 <p>然后无需其余配置<br>flow画流程图示例代码如下</p>
 <blockquote>
-<p>```flow<br>st=&gt;start: Start|past:&gt;<a href="http://www.google.com[blank]" target="_blank" rel="noopener">http://www.google.com[blank]</a><br>e=&gt;end: End:&gt;<a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br>op1=&gt;operation: My Operation|past<br>op2=&gt;operation: Stuff|current<br>sub1=&gt;subroutine: My Subroutine|invalid<br>cond=&gt;condition: Yes<br>or No?|approved:&gt;<a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br>c2=&gt;condition: Good idea|rejected<br>io=&gt;inputoutput: catch something…|request<br>st-&gt;op1(right)-&gt;cond<br>cond(yes, right)-&gt;c2<br>cond(no)-&gt;sub1(left)-&gt;op1<br>c2(yes)-&gt;io-&gt;e<br>c2(no)-&gt;op2-&gt;e<br>```  </p>
+<p>```flow<br>st=&gt;start: Start|past:&gt;<a href="http://www.google.com[blank" target="_blank" rel="noopener">http://www.google.com[blank</a>]<br>e=&gt;end: End:&gt;<a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br>op1=&gt;operation: My Operation|past<br>op2=&gt;operation: Stuff|current<br>sub1=&gt;subroutine: My Subroutine|invalid<br>cond=&gt;condition: Yes<br>or No?|approved:&gt;<a href="http://www.google.com" target="_blank" rel="noopener">http://www.google.com</a><br>c2=&gt;condition: Good idea|rejected<br>io=&gt;inputoutput: catch something…|request<br>st-&gt;op1(right)-&gt;cond<br>cond(yes, right)-&gt;c2<br>cond(no)-&gt;sub1(left)-&gt;op1<br>c2(yes)-&gt;io-&gt;e<br>c2(no)-&gt;op2-&gt;e<br>```  </p>
 </blockquote>
 <p>flow画流程图效果如下</p>
 <div id="flowchart-0" class="flow-chart"></div>
@@ -559,7 +559,7 @@
 <h2 id="sequence"><a href="#sequence" class="headerlink" title="sequence"></a>sequence</h2><p>安装代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-filter-sequence</span><br></pre></td></tr></table></figure></p>
 <p>然后无需其余配置。<br>sequence 画流程图示例代码</p>
 <blockquote>
-<p>```sequence<br>Alice-&gt;Bob: Hello Bob, how are you?<br>Note right of Bob: Bob thinks<br>Bob–&gt;Alice: I am good thanks!<br>```  </p>
+<p>```sequence<br>Alice-&gt;Bob: Hello Bob, how are you?<br>Note right of Bob: Bob thinks<br>Bob—&gt;Alice: I am good thanks!<br>```  </p>
 </blockquote>
 <p>sequence 画流程图效果如下</p>
 <div id="sequence-0"></div>
