@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.60points.com/Hexo_flow/</loc>
+    
+    <lastmod>2018-12-13T21:45:13.576Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.60points.com/lib/needsharebutton/README.html</loc>
     
     <lastmod>2018-12-13T16:39:26.446Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://www.60points.com/Hexo_click_change_text/</loc>
     
     <lastmod>2018-11-25T13:45:52.912Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.60points.com/Hexo_flow/</loc>
-    
-    <lastmod>2018-11-25T04:39:02.846Z</lastmod>
     
   </url>
   

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.60points.com/Hexo_flow/</loc>
+    <lastmod>2018-12-13T21:45:13.576Z</lastmod>
+  </url>  <url>
     <loc>https://www.60points.com/138712181744994/</loc>
     <lastmod>2018-12-06T16:10:24.562Z</lastmod>
   </url>  <url>
@@ -27,9 +30,6 @@
   </url>  <url>
     <loc>https://www.60points.com/Hexo_click_change_text/</loc>
     <lastmod>2018-11-25T13:45:52.912Z</lastmod>
-  </url>  <url>
-    <loc>https://www.60points.com/Hexo_flow/</loc>
-    <lastmod>2018-11-25T04:39:02.846Z</lastmod>
   </url>  <url>
     <loc>https://www.60points.com/handwrite-soduku/</loc>
     <lastmod>2018-11-25T04:38:42.728Z</lastmod>
