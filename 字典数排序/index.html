@@ -545,8 +545,8 @@
 <p>调用前序排序方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 执行排序</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;param name=&quot;n&quot;&gt;&lt;/param&gt;</span><br><span class="line">/// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">public IList&lt;int&gt; LexicalOrder(int n)</span><br><span class="line">&#123;</span><br><span class="line">    TreeNode.Globalvalue = n;</span><br><span class="line">    TreeNode tn = new TreeNode(1);</span><br><span class="line">    List&lt;int&gt; result = new List&lt;int&gt;();</span><br><span class="line">    preOrder(tn, result);</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>该方案并不是通过测试用例耗时最短的方法，毕竟不构造TreeNode类速度会更快，但是恰好复习了一下大学时候所学的二叉树遍历的相关知识,也是挺好的。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://leetcode-cn.com/submissions/detail/1564059/" target="_blank" rel="noopener">字典序排数解题过程</a></li>
-<li><a href="https://leetcode-cn.com/problems/lexicographical-numbers/description/" target="_blank" rel="noopener">386. 字典序排数</a></li>
+<li><a href="https://leetcode-cn.com/submissions/detail/1564059/">字典序排数解题过程</a></li>
+<li><a href="https://leetcode-cn.com/problems/lexicographical-numbers/description/">386. 字典序排数</a></li>
 </ul>
 
       
@@ -973,6 +973,15 @@
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
 
 
+
+
+
+  <script src="https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 
         
@@ -1490,5 +1499,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":140,"height":260},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":140,"height":260},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

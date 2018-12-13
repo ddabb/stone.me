@@ -534,7 +534,7 @@
       
 
       
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在<a href="https://ddabb.github.io/wiki/from_list_S_take_N_numbers_make_sum_K/" target="_blank" rel="noopener">集合S取出n个元素其和为K个数统计</a>这篇文章中提到了笛卡尔积的这种解法，但是以笛卡尔积的方式求解的时候，我中午点击运行，我晚上回来的时候才输出了168条牌型组合，然后一直没有响应，后来粗略估算了一下，需要在1.44E+18条左右数据中进行筛选，而选出总手牌数为20条相当于大海捞针，所以需要重新对问题进行思考。<br>先将问题明确定义——<strong>“在N张手牌中，可能的出牌方式有多少种？”</strong></p>
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>在<a href="https://ddabb.github.io/wiki/from_list_S_take_N_numbers_make_sum_K/">集合S取出n个元素其和为K个数统计</a>这篇文章中提到了笛卡尔积的这种解法，但是以笛卡尔积的方式求解的时候，我中午点击运行，我晚上回来的时候才输出了168条牌型组合，然后一直没有响应，后来粗略估算了一下，需要在1.44E+18条左右数据中进行筛选，而选出总手牌数为20条相当于大海捞针，所以需要重新对问题进行思考。<br>先将问题明确定义——<strong>“在N张手牌中，可能的出牌方式有多少种？”</strong></p>
 <h1 id="牌型分析"><a href="#牌型分析" class="headerlink" title="牌型分析"></a>牌型分析</h1><p>以地主20张手牌为例,20张手牌可能1个炸弹也没有，最多有5个炸弹。所以20张手牌,炸弹的取值范围的取值范围是[0,5];<br>而3张相同的牌带1张单牌也是四张牌,所以20张手牌，出三张相同的牌带一张单牌的次数也是[0,5];<br>如果手牌中存在66667777这样的四张牌,6667和7776这种打法和一个6炸和7炸是两种打牌的方式。<br>同样就算是以6,6,6,6,7,7,7,7这样的8张单牌一次打出去，欺负下家或上家手里只有3,4,5了也不是不可以。<br>所以66667777这样8张牌在不考虑输赢的情况下也是有很多种打法的。而巧的是，我们讨论的是不考虑输赢的情况。  </p>
 <p>20张手牌有几种打出去的方式呢？    </p>
 <blockquote>
@@ -556,7 +556,7 @@
 <p><strong>问题是还有哪些牌型组合在一起能满足总手牌数，但是不符合现实中的牌型呢？</strong></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本以为在计算{1,2,3,4}中取出任意个数，与取出顺序无关时使用笛卡尔积的方式是很好的方式；结果在该问题中待处理数据竟达到了1.44E+18(1.44乘以10的18次方)条之多。<br>由此可知，问题并不是想当然就能够得到解决的，实践永远是检验真理的标准。<br>如果在每种牌型设置其对应的权重,所以在AI中的斗地主，如果能检测出手牌是10连对,或333444555666777带789JQ类型,得赶紧明牌不是么？</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="https://ddabb.github.io/from_list_S_take_N_numbers_make_sum_K/" target="_blank" rel="noopener">集合S取出n个元素其和为K个数统计</a></li>
+<li><a href="https://ddabb.github.io/from_list_S_take_N_numbers_make_sum_K/">集合S取出n个元素其和为K个数统计</a></li>
 <li><a href="Program.cs">C#版源代码</a></li>
 <li><a href="牌型组合.xlsx">牌型组合excel</a></li>
 <li><a href="https://www.60points.com/combination/">m个球放到n个箱子中几种解法</a></li>
@@ -984,6 +984,15 @@
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
 
 
+
+
+
+  <script src="https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 
         
@@ -1501,5 +1510,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":140,"height":260},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":140,"height":260},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
