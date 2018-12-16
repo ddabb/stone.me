@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.60points.com/handwrite-soduku/</loc>
+    <lastmod>2018-12-16T04:15:40.618Z</lastmod>
+  </url>  <url>
+    <loc>https://www.60points.com/Hexo_click_change_text/</loc>
+    <lastmod>2018-12-16T04:15:10.279Z</lastmod>
+  </url>  <url>
     <loc>https://www.60points.com/hexo_share_to_wechat/</loc>
     <lastmod>2018-12-13T22:13:41.335Z</lastmod>
   </url>  <url>
@@ -27,12 +33,6 @@
   </url>  <url>
     <loc>https://www.60points.com/python-print-heart/</loc>
     <lastmod>2018-11-26T13:43:42.180Z</lastmod>
-  </url>  <url>
-    <loc>https://www.60points.com/Hexo_click_change_text/</loc>
-    <lastmod>2018-11-25T13:45:52.912Z</lastmod>
-  </url>  <url>
-    <loc>https://www.60points.com/handwrite-soduku/</loc>
-    <lastmod>2018-11-25T04:38:42.728Z</lastmod>
   </url>  <url>
     <loc>https://www.60points.com/Hexo%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1/</loc>
     <lastmod>2018-11-24T07:14:05.147Z</lastmod>
