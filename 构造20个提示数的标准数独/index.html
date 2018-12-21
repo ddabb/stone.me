@@ -104,19 +104,19 @@
 
 
 
-  <meta name="description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 方案一采取“挖空法”的方式,先参照手写数独教程生成一个数独;再采取行替换,列替换的方式打乱数独我打乱数独的工具是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。然">
+  <meta name="description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 方案一采取“挖空法”的方式,先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述">
 <meta name="keywords" content="数独">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&#39;构造20个提示数的标准数独&#39;">
 <meta property="og:url" content="https://www.60points.com/构造20个提示数的标准数独/index.html">
 <meta property="og:site_name" content="他山之石">
-<meta property="og:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 方案一采取“挖空法”的方式,先参照手写数独教程生成一个数独;再采取行替换,列替换的方式打乱数独我打乱数独的工具是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。然">
+<meta property="og:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 方案一采取“挖空法”的方式,先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.60points.com/构造20个提示数的标准数独/难度7.2.png">
-<meta property="og:updated_time" content="2018-12-21T14:44:30.788Z">
+<meta property="og:updated_time" content="2018-12-21T14:51:41.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&#39;构造20个提示数的标准数独&#39;">
-<meta name="twitter:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 方案一采取“挖空法”的方式,先参照手写数独教程生成一个数独;再采取行替换,列替换的方式打乱数独我打乱数独的工具是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。然">
+<meta name="twitter:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 方案一采取“挖空法”的方式,先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述">
 <meta name="twitter:image" content="https://www.60points.com/构造20个提示数的标准数独/难度7.2.png">
 
 
@@ -454,7 +454,7 @@
                 
               
 
-              <time title="创建时间：2018-12-21 21:19:16 / 修改时间：22:44:30" itemprop="dateCreated datePublished" datetime="2018-12-21T21:19:16+08:00">2018-12-21</time>
+              <time title="创建时间：2018-12-21 21:19:16 / 修改时间：22:51:41" itemprop="dateCreated datePublished" datetime="2018-12-21T21:19:16+08:00">2018-12-21</time>
             
 
             
@@ -518,25 +518,13 @@
 
       
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。</p>
-<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>采取“挖空法”的方式,先参照<a href="https://www.60points.com/handwrite-soduku/">手写数独教程</a>生成一个数独;<br>再采取行替换,列替换的方式打乱数独<br><strong>我打乱数独的工具是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法</strong>，该处不做深入描述。<br>然后随机清除掉(81-20)个格子,看是否能够生成唯一解。不行则重复该过程。  </p>
-<blockquote>
-<p><strong>结论：该方案运气不好的情况下一个小时都没有办法得出一个符合条件的20个提示数的标准数独</strong></p>
-</blockquote>
-<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p>在进行方案一进行实验的时候,我发现若随机生成30个提示数，则很容易构成唯一解。<br>若将具有30个提示数的数独记作初盘<strong>A</strong>。<br>则其可能有效分解为具有29个提示数的初盘<strong>A1</strong>,<strong>A2</strong>。<br><strong>A1</strong>可能有效分解成具有28个提示数的出牌 <strong>B1</strong>,<strong>B2</strong>。<br>假设初盘<strong>A</strong>删除某个位置<strong>L</strong>使<strong>A</strong>分解出来的29个提示数的初盘不具备唯一解。<br>则多次分解之后的<strong>K1</strong>必须包含位置<strong>L</strong>。<br>该过程可以采取<strong>深度优先算法</strong>实现。</p>
-<blockquote>
-<p><strong>结论：该方案可以很好的生成提示数个数为23,24的标准数独,但是基本上很难获取到提示数个数为22以下的标准数独。</strong></p>
-</blockquote>
-<h2 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h2><p>具有30个提示数的数独记作初盘<strong>A</strong>，<br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若清除<strong>L1</strong>或者<strong>L2</strong>或者<strong>L3</strong>等不能构成标准数独。<br>则最终的20个提示数的初盘必定包含位置<strong>L1和L2和L3</strong>。<br>再结合方案二的深度优先算法进行运算  。</p>
-<blockquote>
-<p><strong>结论：该方案即先做一遍广度优先搜索，再做多次深度优先搜索,因为优化了深度优先搜索的判定条件</strong><br><strong>故找到22个提示数的标准数独的速度较方案二有较大提升,但是生成20个提示数的数独依旧极慢。</strong>  </p>
-</blockquote>
-<h2 id="方案四"><a href="#方案四" class="headerlink" title="方案四"></a>方案四</h2><p>具有30个提示数的数独记作初盘<strong>A</strong><br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若初盘有任意19个数字不能删除，且任意删除其中一个之后的29个提示数的初盘必定多解。<br>则最终20个提示数的初盘中一定包含这19个位置的数字<br>只需要从剩余(30-19)=11个位置中任选(20-19)=1个数字，构成11个20个数字的数独初盘,看是否存在标准数独。  </p>
-<blockquote>
-<p><strong>结论：是唯一一个生成了20个提示数的标准数独的一种方案</strong><br><strong>能否找到一个20个提示数的标准数独题还得看最初的30个提示数是否能降解成20个提示数的标准数独题</strong><br><strong>该方案在试图找到23或者24个提示数的标准数独中性能最佳的。</strong>  </p>
-</blockquote>
+<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>采取“挖空法”的方式,先参照<a href="https://www.60points.com/handwrite-soduku/">手写数独教程</a>生成一个数独;<br>再采取行替换,列替换的方式增加生成数独的随机性<br><strong>我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法</strong>，该处不做深入描述。<br>然后随机清除掉(81-20)个格子,看是否能够生成唯一解。不行则重复该过程。<br><strong>结论：该方案运气不好的情况下一个小时都没有办法甚至一整天都没法一个符合条件的20个提示数的标准数独</strong></p>
+<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p>在进行方案一进行实验的时候,我发现若随机生成30个提示数，则很容易构成唯一解。<br>若将具有30个提示数的数独记作初盘<strong>A</strong>。<br>则其可能有效分解为具有29个提示数的初盘<strong>A1</strong>,<strong>A2</strong>。<br><strong>A1</strong>可能有效分解成具有28个提示数的出牌 <strong>B1</strong>,<strong>B2</strong>。<br>假设初盘<strong>A</strong>删除某个位置<strong>L</strong>使<strong>A</strong>分解出来的29个提示数的初盘不具备唯一解。<br>则多次分解之后的<strong>K1</strong>必须包含位置<strong>L</strong>。<br>该过程可以采取<strong>深度优先算法</strong>实现。<br><strong>结论：该方案可以很好的生成提示数个数为23,24的标准数独,但是基本上很难获取到提示数个数为22以下的标准数独。</strong></p>
+<h2 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h2><p>具有30个提示数的数独记作初盘<strong>A</strong>，<br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若清除<strong>L1</strong>或者<strong>L2</strong>或者<strong>L3</strong>等不能构成标准数独。<br>则最终的20个提示数的初盘必定包含位置<strong>L1和L2和L3</strong>。<br>再结合方案二的深度优先算法进行运算  。<br><strong>结论：该方案即先做一遍广度优先搜索，再做多次深度优先搜索,因为优化了深度优先搜索的判定条件</strong><br><strong>故找到22个提示数的标准数独的速度较方案二有较大提升</strong><br><strong>但是生成20个提示数的数独的速度依然很慢。</strong>  </p>
+<h2 id="方案四"><a href="#方案四" class="headerlink" title="方案四"></a>方案四</h2><p>具有30个提示数的数独记作初盘<strong>A</strong><br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若初盘有任意19个数字不能删除，且任意删除其中一个之后的29个提示数的初盘必定多解。<br>则最终20个提示数的初盘中一定包含这19个位置的数字<br>只需要从剩余(30-19)=11个位置中任选(20-19)=1个数字，构成11个20个数字的数独初盘,看是否存在标准数独。<br><strong>结论：是唯一一个生成了20个提示数的标准数独的一种方案</strong><br><strong>能否找到一个20个提示数的标准数独题还得看最初的30个提示数是否能降解成20个提示数的标准数独题</strong><br><strong><font color="#FF0000">该方案在试图找到23或者24个提示数的标准数独中性能最佳的。</font></strong>  </p>
 <h2 id="方案五"><a href="#方案五" class="headerlink" title="方案五"></a>方案五</h2><p>个人暂时未发现，发现之后再补充~</p>
 <h1 id="数独示例"><a href="#数独示例" class="headerlink" title="数独示例"></a>数独示例</h1><p>以下是通过该工具生成的具有22个提示数的难度为7.2的数独<br><img src="/构造20个提示数的标准数独/难度7.2.png" alt="数独示例"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>数学基础永远都是高质量软件产品的前提条件。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><strong><font color="#FF0000">数学基础永远都是高质量软件产品的前提条件。</font></strong></p>
 <h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>@鹿暖，@楠竹 两个数学系的大学生协助复习数学上的知识。<br><strong>QQ群全民数独007(106893459)</strong>对我相关数独技巧问题的大力支持！</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
 <li>[C#实现排列、组合] (<a href="https://www.cnblogs.com/zhao-yi/p/8533035.html">https://www.cnblogs.com/zhao-yi/p/8533035.html</a>)</li>
