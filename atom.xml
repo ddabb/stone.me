@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.60points.com/"/>
-  <updated>2018-12-21T15:04:28.600Z</updated>
+  <updated>2018-12-23T15:17:51.194Z</updated>
   <id>https://www.60points.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2018年总结</title>
+    <link href="https://www.60points.com/2018%E5%B9%B4%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.60points.com/2018年总结/</id>
+    <published>2018-12-23T11:40:29.000Z</published>
+    <updated>2018-12-23T15:17:51.194Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>是时候写2018年的年终总结了。</p><h1 id="新"><a href="#新" class="headerlink" title="新"></a>新</h1><p>前不久，在脉脉上有个话题就是用一个字来总结自己的2018年。我思来想去用了一个<strong>新</strong>字。<br>这个<strong>新</strong>字体现在了很多方面，新的工作，新的租房，新的博客。  </p><h2 id="新的工作"><a href="#新的工作" class="headerlink" title="新的工作"></a>新的工作</h2><p><strong>新技术</strong> 新的工作是于4月份开始的，新工作之前，我只接触过Sql Server一种数据库，今年业内或者业余有接触了Sqlite,Mysql,Pgsql,Redis等数据库。其中Mysql 5.6,5.7,5.8的社区版都浅尝辄止地了解了一番,也算得上有半年的mysql使用经验了。<br><strong>新职责</strong> 之前的工作涉及到需求设计，概要设计，项目管理等各方面;在新工作环境下，这一切变得不复存在，目前阶段只要负责修复bug,产品部署上线即可。会议少了很多，总结也少了很多。<br><strong>新实践</strong> 理念还是原来的理念，拒绝重复。但是实践却落到了实处。工作内容就是完善一个避免重复工作的软件。所以我自行写了一个软件免去了部署过程中的很多的重复低效的步骤。<br><strong>新脾气</strong> 个人一直有个坏毛病，抗干扰的能力太差。自己好不容易整理好的思路网被莫名其妙地打乱难免心情不爽，但是有时候生活就是这样，你不能让所以事情都按照自己的意愿来发展，若声音太噪杂，自己带耳机听歌解决。  </p><h2 id="新的认知"><a href="#新的认知" class="headerlink" title="新的认知"></a>新的认知</h2><p>今年以来，个人认知上面发生了一些改变。<br><strong>新博客</strong> 是在7月28号开始动了整理资料的念头,到如今也有了30余篇文章。这个网站的搭建算是今年的比较满意的成就之一。虽然有时候也会有点质疑同事们整理的资料那么多，是否随着时间的消逝就从来再没有翻阅过。但是自己也深知整理资料的过程就是形成自己的知识体系的过程，好记性不如烂笔头，这部分是必不可少的。<br><strong>新室友</strong> 今年想着改变下自己的生活圈子，选择了自如的合租房。过来合租的小女生基本上都是23~24岁左右的小女生。合租房就是这样，遇到性格相仿的人哪样都好，遇到性格不好的人就哪样都恶，好能好到忙完手头上的事情凌晨三点一起出去吃夜宵，没合租了还得嘲讽我还是单身的事情。总的来说，这些小女生还没毕业就各种找工作，找实习的确是当年的我不能比。认识她们也算是生活中的小庆幸了。<br><strong>新朋友</strong> 今年新认识的朋友要比去年多一些，有些是因为工作上的话题，有些是因为个人兴趣爱好，甚至有的还是极力宣传个人开源软件的大佬。交流得多了就会有种感觉，这个人的文章我拜读过，这个大佬的博客的资料对我有用，就会有种这个圈子就这么大的感觉。这样多交流，自然就共同进步了。<br><strong>新相亲</strong> 这个<strong>新</strong>我多讲几句，自从分手以后表示并不抗拒相亲这件事情，我甚至跑到<strong>我主良缘</strong>作了一个个人性格测评，我表示对老师的专业非常认可，但是我还是没有继续在该平台找对象，并不是不信任其专业。只是一些个人私人原因,没有继续罢了。各种要给我介绍对象的人很多，其余基本上都是在网上聊了几句就没有下文。也就只有一个，我屁颠屁颠地跑到她工作岗位上去见了她，漂亮是真漂亮，但是尬聊是有点真尬聊。行此文之际正值某某多年的离婚谣言被坐实，其实自己的相亲心态一直都没有放端正，就是比较希望在同一个城市生活，然后会觉得自己没有强大到让一个女孩子背井离乡到他乡生活。    </p><h2 id="新的挑战"><a href="#新的挑战" class="headerlink" title="新的挑战"></a>新的挑战</h2><p><strong>新压力</strong>  如果非得跟运势扯上关系，今年的运势的确不是特别好，但是否极泰来，杀不死我的都会使我更加强大吧。只要不是真正意义地被杀死就还有东山再起的时候。  </p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>其实,今年也有不少<strong>旧</strong>，偶遇十年没见的高中隔壁班的女同学,还有初中隔壁班的女同学被作为相亲对象,还有联系了五年没联系的大学同学，生活的圈子就是这样，可以很大，也可以很小。看自己是否愿意改变罢了。<br>总的来说,今年我的职场发展，人际关系，居住环境等都发生了很大的变化。有赞赏，有批评。有希冀，有失落。个人总结下来，这一年还是收获了不少新知，算是一大突破吧。愿与看到此处的朋友共勉。  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;是时候写2018年的年终总结了。&lt;/p&gt;
+&lt;h1 id=&quot;新&quot;&gt;&lt;a href=&quot;#新&quot; class=&quot;headerlink&quot; title=&quot;新&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="总结" scheme="https://www.60points.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>构造20个提示数的标准数独</title>
@@ -540,33 +566,6 @@
     
     
       <category term="原创" scheme="https://www.60points.com/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建站原因</title>
-    <link href="https://www.60points.com/%E5%BB%BA%E7%AB%99%E5%8E%9F%E5%9B%A0/"/>
-    <id>https://www.60points.com/建站原因/</id>
-    <published>2018-10-25T15:37:09.000Z</published>
-    <updated>2018-11-12T08:34:24.885Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p> 前几天翻阅过去的日志，里面有一句话——如果没有去长城的想法，那就摸不到长城的砖块。<br> 换而言之，如果我不想搭建一个网站，那该网站就不会诞生。搭建网站总是有一个目标的，那我搭建该网站的目标是啥？  </p><h2 id="分享传播"><a href="#分享传播" class="headerlink" title="分享传播"></a>分享传播</h2><p>最初的原因是我有时间，我有工作经验，然后我钦佩一些圈子内的技术大牛，认同他们的开源理念，想追随他们的脚步，故有了最初的目标：</p><ul><li>搭建一个网站用于知识的分享和传播。</li></ul><h2 id="记录知识"><a href="#记录知识" class="headerlink" title="记录知识"></a>记录知识</h2><p>在搭建网站的过程中遇到的问题也越来越多，比如后台是Dbfirst还是code first？网站需不需要走Https?网站要不要引入Abp框架？富文本的编辑工具选择什么？怎么样做QQ登录？微信授权登录该怎么实现？在一步一步的功能实现过程中遇到了很多在工作中没有遇到过的问题，也在解决这些问题的过程中接触到了很多的之前未曾涉及到的知识点，所以搭建网站的过程中又新增了一个目标：</p><ul><li>记录我在搭建网站过程中走过的坑，希望同行有幸看到该文章，不再走相似的重复道路。</li></ul><h2 id="归纳整理"><a href="#归纳整理" class="headerlink" title="归纳整理"></a>归纳整理</h2><p>在做技术选型的时候，为了实现跨平台我选择了.net core。  </p><p>试图将Abp框架签入个人网站中时,发现<strong>Abp的确不适合小型项目</strong>，在接触<a href="https://www.cnblogs.com/kellynic/p/9712483.html">gensql网站快速开发</a>之后,觉得使用Abp创建个人博客估计年底都完成不了，这不符合我快速开发的预期理念，因此放弃了code first，选择了db first。</p><p>gensql工具适合于做后台管理的模板生成器,并没有提供可以选择的前端主题,故我决定自行选择一个UI主题,选择了以前公司工作时用到的<a href="http://www.inspinia.cn">inspinia</a>作为前端Ui,充分阐释了手上只有锤子，什么都是钉子的道理。  </p><p>确定好前端Ui之后,接下来就需要选择博客的富文本编辑器。在<br><a href="https://www.layui.com/">layui</a><br><a href="https://summernote.org/">summernote</a><br><a href="https://ueditor.baidu.com/website/index.html">ueditor</a>等编辑器中进行了试验，发现都得自行编写上传图片和文件的逻辑,界面展示效果也没有很好看,故选择放弃这三个编辑器。<br>不经意间接触了MarkDown的语法,了解到了<a href="https://github.com/Dynalon/mdwiki/releases">MDwiki</a>能快速搭建博客站点，展示效果比在inspinia中的文章的文章页面效果要好,但是该MDwiki在手机端的展示效果并没有符合我的预期。  </p><p>最终有幸接触了<a href="https://www.cnblogs.com/blogjun/articles/8289977.html?from=timeline">使用Hexo搭建个人博客（二）-安装部署</a>和<a href="https://github.com/zthxxx/hexo-theme-Wikitten/blob/master/README_zh-CN.md">hexo-theme-Wikitten</a>的配置教程。参考这两篇文章终于搭建了<a href="https://ddabb.github.io">60分小站</a>这个站点。  </p><p>由此可见，整个搭建个人博客的过程中我走了不少的弯路，如果最先接触最后的两篇文章就不要费劲这么多周折才搭建好一个个人博客网站。尽管不少曲折,但也因此我也学到了不少东西。之前并没有在博客园编写个人博客的习惯，毕竟博客园的编辑器相对MarkDown这种语法来讲显得比较臃肿。该网站又多出了一个作用：</p><ul><li>养成做笔记的习惯,归纳整理个人的知识库，有利于日后的检索和温习。</li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li><a href="https://www.cnblogs.com/kellynic/p/9712483.html">gensql网站快速开发</a></li><li><a href="http://www.inspinia.cn">inspinia</a></li><li><a href="https://summernote.org/">summernote</a></li><li><a href="https://www.layui.com/">layui</a></li><li><a href="https://ueditor.baidu.com/website/index.html">ueditor</a></li><li><a href="https://github.com/Dynalon/mdwiki/releases">MDwiki</a></li><li><a href="https://www.cnblogs.com/blogjun/articles/8289977.html?from=timeline">使用Hexo搭建个人博客（二）-安装部署</a></li><li><a href="https://github.com/zthxxx/hexo-theme-Wikitten/blob/master/README_zh-CN.md">hexo-theme-Wikitten</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h2&gt;&lt;p&gt; 前几天翻阅过去的日志，里面有一句话——如果没有去长城的想法，那就摸不到长城的砖块。&lt;br&gt; 换而言之，如果我不想搭建一个网站，那该网站就不会诞生。
-      
-    
-    </summary>
-    
-      <category term="关于博客" scheme="https://www.60points.com/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="博客" scheme="https://www.60points.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="网站" scheme="https://www.60points.com/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
