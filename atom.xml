@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.60points.com/"/>
-  <updated>2018-12-23T15:25:09.891Z</updated>
+  <updated>2018-12-25T15:19:01.892Z</updated>
   <id>https://www.60points.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SqlServer 迁移到mysql</title>
+    <link href="https://www.60points.com/sqlserver-to-mysql/"/>
+    <id>https://www.60points.com/sqlserver-to-mysql/</id>
+    <published>2018-12-25T13:56:21.000Z</published>
+    <updated>2018-12-25T15:19:01.892Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近有开展Sqlserver 迁移到mysql的工作,以下经验基本上是别的博客没有提到过的，故行此文以作补充。</p><h1 id="版本差异"><a href="#版本差异" class="headerlink" title="版本差异"></a>版本差异</h1><h2 id="时间精度"><a href="#时间精度" class="headerlink" title="时间精度"></a>时间精度</h2><p>Mysql 5.5版本不支持毫秒,Mysql 5.6以上才支持。<br>时间格式为<strong>DateTime(3)</strong>,当前时间为<strong>Now(3)</strong>。在5.5版本上,这两种写法为提示错误。</p><h2 id="row-number函数"><a href="#row-number函数" class="headerlink" title="row_number函数"></a>row_number函数</h2><p>mysql 8.0才支持row_number函数，低版本都不支持该函数。<br><strong>低版本实现方式:</strong> 游标查询,或者少量数据的情况下,创建带有自增主键的临时表。</p><h2 id="mysql-proc表"><a href="#mysql-proc表" class="headerlink" title="mysql.proc表"></a>mysql.proc表</h2><p>该表在mysql 8.0版本中已经不存在了,所以 <strong><font color="#FF0000">select * from mysql.proc；</font></strong>在mysql 8.0版本中会报错;<br>需要转换成 <strong><font color="#FF0000">show procedure status where db=’sys’;</font></strong>这种写法来获取存储过程的相关信息。</p><h2 id="with-cte"><a href="#with-cte" class="headerlink" title="with cte"></a>with cte</h2><p>mysql 8.0以上才支持cte,但是如下的递归cte,所有版本都不支持<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">with cte as</span><br><span class="line">(</span><br><span class="line">    select Id,Pid,DeptName,0 as lvl from Department</span><br><span class="line">    where Id = 2</span><br><span class="line">    union all</span><br><span class="line">    select d.Id,d.Pid,d.DeptName,lvl+1 from cte c inner join Department d</span><br><span class="line">    on c.Id = d.Pid</span><br><span class="line">)</span><br><span class="line">select * from cte</span><br></pre></td></tr></table></figure></p><h2 id="net-framework框架"><a href="#net-framework框架" class="headerlink" title=".net framework框架"></a>.net framework框架</h2><p>5.6 及以上的的版本使用<br><strong>mysql.data.dll</strong>时需要 <strong>.net framework 4.5.2</strong>以上。</p><h1 id="Mysql不具备的SQL-Server语法"><a href="#Mysql不具备的SQL-Server语法" class="headerlink" title="Mysql不具备的SQL Server语法"></a>Mysql不具备的SQL Server语法</h1><h2 id="uniqueidentifier"><a href="#uniqueidentifier" class="headerlink" title="uniqueidentifier"></a>uniqueidentifier</h2><p>SqlServer 通过WorkBench 迁移到Mysql时，该字段会自动变成varchar(36)类型。Mysql对应的生成Guid的语法是<strong>uuid()</strong>。<br>因object不支持强制转换成Guid，<br>所以应将接口代码中的 <strong>(Guid)cmd.ExecuteScalar()</strong>替换成<strong>new Guid(cmd.ExecuteScalar())</strong></p><h2 id="deleted-Inserted"><a href="#deleted-Inserted" class="headerlink" title="deleted,Inserted"></a>deleted,Inserted</h2><p>SqlServer在执行 insert into table_a select top 10 columnname from table_b时可以通过inserted获取到新插入的十条记录的自增主键,而Mysql不可以。<br><strong>实现方式</strong>表新增Guid辅助字段,并将Guid放在临时表,通过多表链接查询获取数据。</p><h2 id="select-top-…-percent"><a href="#select-top-…-percent" class="headerlink" title="select top … percent"></a>select top … percent</h2><p>SqlServer在执行 select top 10 percent columnname from table_a,如果table_a中有200条记录,则会返回前20条记录。<br><strong>实现方式</strong>Mysql 需要通过获取总记录条数，然后获取总条数*百分比来获取数据。</p><h1 id="临时表编码"><a href="#临时表编码" class="headerlink" title="临时表编码"></a>临时表编码</h1><p>CREATE TEMPORARY TABLE<br>temptable1(groupname VARCHAR(50))<br> <strong><font color="#FF0000">DEFAULT CHARSET=utf8;</font></strong><br>这样可以解决临时表不能插入中文的问题。</p><h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><h2 id="默认位置"><a href="#默认位置" class="headerlink" title="默认位置"></a>默认位置</h2><p><strong>5.5：</strong> C:\\<font color="#FF0000">Program Files</font>\MySQL\MySQL Server 5.5\my.ini<br><strong>5.6：</strong> C:\\<font color="#FF0000">ProgramData</font>\MySQL\MySQL Server 5.6\my.ini<br><strong>5.7：</strong> C:\\<font color="#FF0000">ProgramData</font>\MySQL\MySQL Server 5.7\my.ini<br><strong>8.0：</strong> C:\\<font color="#FF0000">ProgramData</font>\MySQL\MySQL Server 8.0\my.ini<br><strong><font color="#FF0000">配置文件修改以后重启mysqlserver才会生效。</font></strong></p><h2 id="longtext存储"><a href="#longtext存储" class="headerlink" title="longtext存储"></a>longtext存储</h2><p>max_allowed_packet 的默认值是4M。<br>设置<strong>max_allowed_packet=100M</strong>可以解决longtext数据的存储长度的问题。</p><h2 id="数据库名大小写"><a href="#数据库名大小写" class="headerlink" title="数据库名大小写"></a>数据库名大小写</h2><p>lower_case_table_names<br>设置lower_case_table_names=1,表名称都设置为统一小写。</p><h2 id="id自增不连续"><a href="#id自增不连续" class="headerlink" title="id自增不连续"></a>id自增不连续</h2><p>innodb_autoinc_lock_mode=0  解决id自增不连续的问题；</p><h1 id="语法差异"><a href="#语法差异" class="headerlink" title="语法差异"></a>语法差异</h1><h2 id="不等于"><a href="#不等于" class="headerlink" title="不等于"></a>不等于</h2><p>SqlServer的不等于符号 <strong>!=</strong>中间可以存在空格，而Mysql的不可以。<br>Sql Server： select <em> from a where a.column !    = 0  <font color="#FF0000">不报错</font><br>Mysql： select </em> from a where a.column !    = 0       <font color="#FF0000">报错</font><br>Mysql： select * from a where a.column != 0           <font color="#FF0000">不报错</font>  </p><h2 id="逻辑取反"><a href="#逻辑取反" class="headerlink" title="逻辑取反"></a>逻辑取反</h2><p>SqlServer ： update table_a set isOk=~isOk;<br>Mysql     ： update table_a set isOk=!isOk;</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>以上就是本人在做SqlServer 迁移到Mysql的过程中遇到的问题以及相应的解决方案,希望该文能作为相关注意事项的补充。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;最近有开展Sqlserver 迁移到mysql的工作,以下经验基本上是别的博客没有提到过的，故行此文以作补充。&lt;/p&gt;
+&lt;h1 id=&quot;版本差异&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="IT经验" scheme="https://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/"/>
+    
+      <category term="数据库迁移" scheme="https://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"/>
+    
+    
+      <category term="mysql" scheme="https://www.60points.com/tags/mysql/"/>
+    
+      <category term="sqlserver" scheme="https://www.60points.com/tags/sqlserver/"/>
+    
+  </entry>
   
   <entry>
     <title>2018年总结</title>
@@ -534,38 +564,6 @@
     
     
       <category term="人狼羊菜" scheme="https://www.60points.com/tags/%E4%BA%BA%E7%8B%BC%E7%BE%8A%E8%8F%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浅谈倾听</title>
-    <link href="https://www.60points.com/%E6%B5%85%E8%B0%88%E5%80%BE%E5%90%AC/"/>
-    <id>https://www.60points.com/浅谈倾听/</id>
-    <published>2018-10-27T14:00:53.000Z</published>
-    <updated>2018-11-12T07:58:52.305Z</updated>
-    
-    <content type="html"><![CDATA[<p>这件事情发生于2014-4-21这一天。<br>我坐在小卖部休息，店家的2岁的小女孩看我手上拿着kindle，表示很好奇。</p><ul><li>叔叔，我要抱。  </li><li>好啊。  </li></ul><p>她坐到了我的腿上。  </p><ul><li>叔叔，这是什么啊？  </li></ul><p>小女孩指着我的kindle问道。  </p><ul><li>这是哥哥看书的，哥哥教你认字好不好啊？  </li><li>好啊！    </li><li>这个字读什么啊?    </li></ul><p>我指着屏幕上的“人”字问她</p><ul><li>人。  </li><li>那你是人不？  </li><li>是啊。  </li><li>那我是人不？  </li><li>是啊。  </li><li>那你爸爸妈妈是人不？  </li><li>是啊。  </li><li>那你哥哥呢？  </li><li>他不是，他是狗。  </li></ul><p>她为什么会觉得她哥哥是狗呢？我可以教教她人和狗的区别是什么。</p><ul><li>你有几只脚啊？  </li><li>两只脚。  </li><li>你哥哥呢？  </li><li>两只脚。  </li><li>那你哥哥是狗不？  </li><li>是啊！  </li></ul><p>我开始有点抓狂了，怎么小孩子这么犟呢？外面恰好走过一只小狗~</p><ul><li>那狗有几只脚呢？  </li><li>我不知道，我出去数数。      </li></ul><p>片刻，她开口了。</p><ul><li>三只。  </li><li>不对，你再数数。  </li><li>五只。  </li><li>不对，你再数数。  </li><li>七只。  </li></ul><p>我彻底的无语了，我无力吐槽了，这时候她还没有体育老师呢~    </p><ul><li>四只。  </li><li>是的，你哥哥几只脚？  </li><li>两只。  </li><li>狗有几只脚呢？  </li><li>四只。  </li></ul><p>我觉得我胜利在望了，我可以去华师大读书拿教师证了。最后一个问题就是我的杀手锏，让这个小女孩深刻地反省到自己的错误。  </p><ul><li>那你哥哥是狗不？  </li><li>是啊，我哥哥是属狗的！    </li></ul><p>剩下我在原地凌乱。</p><p>回想起来，这件事情于我依旧是一个很好的课程。沟通不是鱼死网破式地证明自己是对的，而是要真正地耐心地倾听对方的想法，这才是重要的。<br>最后编辑于 2018年10月25日22:07:38</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这件事情发生于2014-4-21这一天。&lt;br&gt;我坐在小卖部休息，店家的2岁的小女孩看我手上拿着kindle，表示很好奇。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;叔叔，我要抱。  &lt;/li&gt;
-&lt;li&gt;好啊。  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;她坐到了我的腿上。  &lt;/p&gt;
-&lt;ul&gt;
-&lt;l
-      
-    
-    </summary>
-    
-      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="原创" scheme="https://www.60points.com/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
