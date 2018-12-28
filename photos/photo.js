@@ -21,8 +21,8 @@ photo ={
            imageY = imageSize.split('.')[1];
             li += '<div class="card" style="width:330px">' +
                     '<div class="ImageInCard" style="height:'+ 330 * imageY / imageX + 'px">' +
-                      '<a data-fancybox="gallery" href="https://github.com/ddabb/ddabb.github.io/tree/master/photos/images/' + imgNameWithPattern + '" data-caption="' + imgName + '">' +
-                        '<img src="https://github.com/ddabb/ddabb.github.io/tree/master/photos/images/' + imgNameWithPattern + '"/>' +
+                      '<a data-fancybox="gallery" href="/images/' + imgNameWithPattern + '?raw=true" data-caption="' + imgName + '">' +
+                        '<img src="/images/' + imgNameWithPattern + '?raw=true"/>' +
                       '</a>' +
                     '</div>' +
                     // '<div class="TextInCard">' + imgName + '</div>' +
