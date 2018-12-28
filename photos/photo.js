@@ -29,7 +29,7 @@ photo ={
                   '</div>'
         }
         $(".ImageGrid").append(li);
-        $(".ImageGrid").lazyload();
+        jQuery(document).ready(function ($) { $(".ImageGrid").lazyload();});
         this.minigrid();
     },
     minigrid: function() {
