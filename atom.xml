@@ -206,9 +206,9 @@
     
       <category term="hexo" scheme="https://www.60points.com/tags/hexo/"/>
     
-      <category term="mathjax" scheme="https://www.60points.com/tags/mathjax/"/>
-    
       <category term="数独" scheme="https://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
+    
+      <category term="mathjax" scheme="https://www.60points.com/tags/mathjax/"/>
     
   </entry>
   
