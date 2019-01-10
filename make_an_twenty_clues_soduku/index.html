@@ -110,20 +110,20 @@
 
 
 
-  <meta name="description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 构造数独先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。 出题方案方案一采">
+  <meta name="description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 构造数独先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。 出题方案方案一之">
 <meta name="keywords" content="数独">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构造20个提示数的标准数独">
 <meta property="og:url" content="https://www.60points.com/make_an_twenty_clues_soduku/index.html">
 <meta property="og:site_name" content="他山之石">
-<meta property="og:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 构造数独先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。 出题方案方案一采">
+<meta property="og:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 构造数独先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。 出题方案方案一之">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.60points.com/make_an_twenty_clues_soduku/固定形状.png">
 <meta property="og:image" content="https://www.60points.com/make_an_twenty_clues_soduku/难度7.2.png">
-<meta property="og:updated_time" content="2018-12-24T15:17:08.929Z">
+<meta property="og:updated_time" content="2019-01-10T14:43:19.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构造20个提示数的标准数独">
-<meta name="twitter:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 构造数独先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。 出题方案方案一采">
+<meta name="twitter:description" content="序最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。 构造数独先参照手写数独教程生成一个数独;再采取行替换,列替换的方式增加生成数独的随机性我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法，该处不做深入描述。 出题方案方案一之">
 <meta name="twitter:image" content="https://www.60points.com/make_an_twenty_clues_soduku/固定形状.png">
 
 
@@ -495,7 +495,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-24 23:17:08" itemprop="dateModified" datetime="2018-12-24T23:17:08+08:00">2018-12-24</time>
+                <time title="修改时间：2019-01-10 22:43:19" itemprop="dateModified" datetime="2019-01-10T22:43:19+08:00">2019-01-10</time>
               
             
           </span>
@@ -583,11 +583,11 @@
       
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近在业余时间试图制作一个数独相关的小软件,包含生成标准数独的功能,但是在构造20个提示数的初盘的时候遇到了一些问题，故写下此文记录采取的一些方案。</p>
 <h1 id="构造数独"><a href="#构造数独" class="headerlink" title="构造数独"></a>构造数独</h1><p>先参照<a href="https://www.60points.com/handwrite-soduku/">手写数独教程</a>生成一个数独;<br>再采取行替换,列替换的方式增加生成数独的随机性<br><strong>我采取的是MathNet.Numerics中DenseMatrix的PermuteColumns和PermuteRows方法</strong>，该处不做深入描述。</p>
-<h1 id="出题方案"><a href="#出题方案" class="headerlink" title="出题方案"></a>出题方案</h1><h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>采取“挖空法”的方式, 随机清除掉完整数独中的(81-20)个数字,看是否能够生成唯一解。不行则重复该过程。<br><strong>结论：该方案运气不好的情况下一个小时都没有办法甚至一整天都没法一个符合条件的20个提示数的标准数独</strong></p>
-<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p>在进行方案一进行实验的时候,我发现若随机生成30个提示数，则很容易构成唯一解。<br>若将具有30个提示数的数独记作初盘<strong>A</strong>。<br>则其可能有效分解为具有29个提示数的初盘<strong>A1</strong>,<strong>A2</strong>。<br><strong>A1</strong>可能有效分解成具有28个提示数的出牌 <strong>B1</strong>,<strong>B2</strong>。<br>假设初盘<strong>A</strong>删除某个位置<strong>L</strong>使<strong>A</strong>分解出来的29个提示数的初盘不具备唯一解。<br>则多次分解之后的<strong>K1</strong>必须包含位置<strong>L</strong>。<br>该过程可以采取<strong>深度优先算法</strong>实现。<br><strong>结论：该方案可以很好的生成提示数个数为23,24的标准数独,但是基本上很难获取到提示数个数为22以下的标准数独。</strong></p>
-<h2 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h2><p>具有30个提示数的数独记作初盘<strong>A</strong>，<br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若清除<strong>L1</strong>或者<strong>L2</strong>或者<strong>L3</strong>等不能构成标准数独。<br>则最终的20个提示数的初盘必定包含位置<strong>L1和L2和L3</strong>。<br>再结合方案二的深度优先算法进行运算  。<br><strong>结论：该方案即先做一遍广度优先搜索，再做多次深度优先搜索,因为优化了深度优先搜索的判定条件</strong><br><strong>故找到22个提示数的标准数独的速度较方案二有较大提升</strong><br><strong>但是生成20个提示数的数独的速度依然很慢。</strong>  </p>
-<h2 id="方案四"><a href="#方案四" class="headerlink" title="方案四"></a>方案四</h2><p>具有30个提示数的数独记作初盘<strong>A</strong><br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若初盘有任意19个数字不能删除，且任意删除其中一个之后的29个提示数的初盘必定多解,<br>则最终20个提示数的初盘中一定包含这19个位置的数字。<br>只需要从剩余(30-19)=11个位置中任选(20-19)=1个数字，构成11个20个数字的数独初盘,看是否存在标准数独。<br><strong>结论：是唯一一个生成了20个提示数的标准数独的一种方案</strong><br><strong>能否找到一个20个提示数的标准数独题还得看最初的30个提示数是否能降解成20个提示数的标准数独题</strong><br><strong><font color="#FF0000">该方案在试图找到23或者24个提示数的标准数独中性能最佳的。</font></strong>  </p>
-<h2 id="方案五"><a href="#方案五" class="headerlink" title="方案五"></a>方案五</h2><p>先固定要保留的位置，然后每次都重置完整的数独，直到数独初盘构成唯一解时，则停止。这样也有利于产生一些漂亮的图案。<br>如下图所示<br><img src="/make_an_twenty_clues_soduku/固定形状.png" alt="确认位置生成的数独"></p>
+<h1 id="出题方案"><a href="#出题方案" class="headerlink" title="出题方案"></a>出题方案</h1><h2 id="方案一之靠运气"><a href="#方案一之靠运气" class="headerlink" title="方案一之靠运气"></a>方案一之靠运气</h2><p>采取“挖空法”的方式, 随机清除掉完整数独中的(81-20)个数字,看是否能够生成唯一解。不行则重复该过程。<br><strong>结论：该方案运气不好的情况下一个小时都没有办法甚至一整天都没法一个符合条件的20个提示数的标准数独</strong></p>
+<h2 id="方案二之减少冗余提示数"><a href="#方案二之减少冗余提示数" class="headerlink" title="方案二之减少冗余提示数"></a>方案二之减少冗余提示数</h2><p>在进行方案一进行实验的时候,我发现若随机生成30个提示数，则很容易构成唯一解。<br>若将具有30个提示数的数独记作初盘<strong>A</strong>。<br>则其可能有效分解为具有29个提示数的初盘<strong>A1</strong>,<strong>A2</strong>。<br><strong>A1</strong>可能有效分解成具有28个提示数的出牌 <strong>B1</strong>,<strong>B2</strong>。<br>假设初盘<strong>A</strong>删除某个位置<strong>L</strong>使<strong>A</strong>分解出来的29个提示数的初盘不具备唯一解。<br>则多次分解之后的<strong>K1</strong>必须包含位置<strong>L</strong>。<br>该过程可以采取<strong>深度优先算法</strong>实现。<br><strong>结论：该方案可以很好的生成提示数个数为23,24的标准数独,但是基本上很难获取到提示数个数为22以下的标准数独。</strong></p>
+<h2 id="方案三之减少冗余提示数优化"><a href="#方案三之减少冗余提示数优化" class="headerlink" title="方案三之减少冗余提示数优化"></a>方案三之减少冗余提示数优化</h2><p>具有30个提示数的数独记作初盘<strong>A</strong>，<br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若清除<strong>L1</strong>或者<strong>L2</strong>或者<strong>L3</strong>等不能构成标准数独。<br>则最终的20个提示数的初盘必定包含位置<strong>L1和L2和L3</strong>。<br>再结合方案二的深度优先算法进行运算  。<br><strong>结论：该方案即先做一遍广度优先搜索，再做多次深度优先搜索,因为优化了深度优先搜索的判定条件</strong><br><strong>故找到22个提示数的标准数独的速度较方案二有较大提升</strong><br><strong>但是生成20个提示数的数独的速度依然很慢。</strong>  </p>
+<h2 id="方案四之排列组合"><a href="#方案四之排列组合" class="headerlink" title="方案四之排列组合"></a>方案四之排列组合</h2><p>具有30个提示数的数独记作初盘<strong>A</strong><br>对初盘<strong>A</strong>的元素进行依次清空动作,生成30个具有29个提示数的初盘<strong>B1~B29</strong>。<br>若初盘有任意19个数字不能删除，且任意删除其中一个之后的29个提示数的初盘必定多解,<br>则最终20个提示数的初盘中一定包含这19个位置的数字。<br>只需要从剩余(30-19)=11个位置中任选(20-19)=1个数字，构成11个20个数字的数独初盘,看是否存在标准数独。<br><strong>结论：是唯一一个生成了20个提示数的标准数独的一种方案</strong><br><strong>能否找到一个20个提示数的标准数独题还得看最初的30个提示数是否能降解成20个提示数的标准数独题</strong><br><strong><font color="#FF0000">该方案在试图找到23或者24个提示数的标准数独中性能最佳的。</font></strong>  </p>
+<h2 id="方案五之位置变化，数独变换"><a href="#方案五之位置变化，数独变换" class="headerlink" title="方案五之位置变化，数独变换"></a>方案五之位置变化，数独变换</h2><p>先固定要保留的位置，然后每次都重置完整的数独，直到数独初盘构成唯一解时，则停止。这样也有利于产生一些漂亮的图案。<br>如下图所示<br><img src="/make_an_twenty_clues_soduku/固定形状.png" alt="确认位置生成的数独"></p>
 <h1 id="数独示例"><a href="#数独示例" class="headerlink" title="数独示例"></a>数独示例</h1><p>以下是通过该工具生成的具有22个提示数的难度为7.2的数独<br><img src="/make_an_twenty_clues_soduku/难度7.2.png" alt="数独示例"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><strong><font color="#FF0000">数学基础永远都是高质量软件产品的前提条件。</font></strong></p>
 <h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>@鹿暖，@楠竹 两个数学系的大学生协助复习数学上的知识。<br><strong>QQ群全民数独007(106893459)</strong>对我相关数独技巧问题的大力支持！</p>
@@ -780,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -811,7 +811,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -930,7 +932,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">53</span>
+                      
+                    
+                    <span class="site-state-item-count">54</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1001,7 +1005,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造数独"><span class="nav-number">2.</span> <span class="nav-text">构造数独</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#出题方案"><span class="nav-number">3.</span> <span class="nav-text">出题方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方案一"><span class="nav-number">3.1.</span> <span class="nav-text">方案一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案二"><span class="nav-number">3.2.</span> <span class="nav-text">方案二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案三"><span class="nav-number">3.3.</span> <span class="nav-text">方案三</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案四"><span class="nav-number">3.4.</span> <span class="nav-text">方案四</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案五"><span class="nav-number">3.5.</span> <span class="nav-text">方案五</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数独示例"><span class="nav-number">4.</span> <span class="nav-text">数独示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢"><span class="nav-number">6.</span> <span class="nav-text">致谢</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造数独"><span class="nav-number">2.</span> <span class="nav-text">构造数独</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#出题方案"><span class="nav-number">3.</span> <span class="nav-text">出题方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方案一之靠运气"><span class="nav-number">3.1.</span> <span class="nav-text">方案一之靠运气</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案二之减少冗余提示数"><span class="nav-number">3.2.</span> <span class="nav-text">方案二之减少冗余提示数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案三之减少冗余提示数优化"><span class="nav-number">3.3.</span> <span class="nav-text">方案三之减少冗余提示数优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案四之排列组合"><span class="nav-number">3.4.</span> <span class="nav-text">方案四之排列组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案五之位置变化，数独变换"><span class="nav-number">3.5.</span> <span class="nav-text">方案五之位置变化，数独变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数独示例"><span class="nav-number">4.</span> <span class="nav-text">数独示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#致谢"><span class="nav-number">6.</span> <span class="nav-text">致谢</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -1021,7 +1025,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1033,7 +1037,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">105k</span>
+    <span title="站点总字数">106k</span>
   
 
   
@@ -1042,7 +1046,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:35</span>
+    <span title="站点阅读时长">1:36</span>
   
 </div>
 
