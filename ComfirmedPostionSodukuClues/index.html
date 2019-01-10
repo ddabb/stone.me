@@ -126,7 +126,7 @@
 <meta property="og:image" content="https://www.60points.com/ComfirmedPostionSodukuClues/旦.png">
 <meta property="og:image" content="https://www.60points.com/ComfirmedPostionSodukuClues/快.png">
 <meta property="og:image" content="https://www.60points.com/ComfirmedPostionSodukuClues/乐.png">
-<meta property="og:updated_time" content="2019-01-10T14:49:53.552Z">
+<meta property="og:updated_time" content="2019-01-10T14:52:01.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="迟到的元旦快乐">
 <meta name="twitter:description" content="序在元旦之前，本想炫技生成漂亮的数独图案的题目然后发在朋友圈祝朋友们节日快乐。可惜是技术实在不过关。 数独图形在资深的数独迷眼里,标准数独是指通过盘面上的所有提示数字，有且仅有唯一解。以下四个图形，虽说有“元旦快乐”的四个字样，但是并不具备唯一解。 我们可以经由DLX算法可以快速得知以上“元旦快乐”四个数字的可能解的个数是分别是512,8388,66,285。 标准数独的基本条件 盘面至少17个数">
@@ -484,7 +484,7 @@
                 
               
 
-              <time title="创建时间：2019-01-10 21:15:08 / 修改时间：22:49:53" itemprop="dateCreated datePublished" datetime="2019-01-10T21:15:08+08:00">2019-01-10</time>
+              <time title="创建时间：2019-01-10 21:15:08 / 修改时间：22:52:01" itemprop="dateCreated datePublished" datetime="2019-01-10T21:15:08+08:00">2019-01-10</time>
             
 
             
@@ -583,8 +583,9 @@
 </blockquote>
 <h1 id="求解过程"><a href="#求解过程" class="headerlink" title="求解过程"></a>求解过程</h1><p>以元字的表达式为例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 元表达式</span><br><span class="line">var before = new DanceLink().solution_count(&quot;000000000001234500000000020134659782000308000000402000000703004009006007070001358&quot;);</span><br><span class="line">// 元的第一个已知数据和第二个已知数据交换</span><br><span class="line">var after  = new DanceLink().solution_count(&quot;000000000002134500000000020134659782000308000000402000000703004009006007070001358&quot;);</span><br></pre></td></tr></table></figure></p>
 <p>输出的结果是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">before = 512;</span><br><span class="line">after  = 312;</span><br></pre></td></tr></table></figure></p>
-<p>所以最终解可以由after的表达式进行进一步的两两交换去生成。<br>由因为A的已知数据是30个，所以位置的交换有30<em>29/2=435种。<br>整个交换的执行流程如下：<br>1、建立一个尝试字典集tryDic,键是数独的表达式,值是数独的值。<br>2、30个位置进行组合，生成435个包含两个位置的集合。<br>3、数独表达式交换前后分别记为before,after,解的个数分别记作b,a,将before,after及其结果数存入tryDic。<br>4、对435个集合进行遍历,若a!=0,且a小于b,则before=after;<br>5、很有可能第一轮排列组合之后,a并不等于1;没有找到唯一解的数独表达式,选取tryDic的结果个数最多的字符串S出来作为下一轮循环的因子。<br>6、循环执行1~5的过程，<em>*注意步骤5中的字符串S应该是过往循环中没有使用过的，否则会陷入死循环。</em></em></p>
-<p>书上以<strong>001000009000200046007080000000001000003000200000500000000030800960007000200000500</strong> 这个18个提示数的数独作为例子作为讲解，我也通过以上流程生成了一个18个提示数的标准数独。</p>
+<p>所以最终解可以由after的表达式进行进一步的两两交换去生成。<br>由因为A的已知数据是30个，所以位置的交换有30*29/2=435种。<br>整个交换的执行流程如下：<br>1、建立一个尝试字典集tryDic,键是数独的表达式,值是数独的值。<br>2、30个位置进行组合，生成435个包含两个位置的集合。<br>3、数独表达式交换前后分别记为before,after,解的个数分别记作b,a,将before,after及其结果数存入tryDic。<br>4、对435个集合进行遍历,若a!=0,且a小于b,则before=after;<br>5、很有可能第一轮排列组合之后,a并不等于1;没有找到唯一解的数独表达式,选取tryDic的结果个数最多的字符串S出来作为下一轮循环的因子。<br>6、循环执行1~5的过程，<strong>注意步骤5中的字符串S应该是过往循环中没有使用过的，否则会陷入死循环。</strong></p>
+<p>书上以<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">001000009000200046007080000000001000003000200000500000000030800960007000200000500</span><br></pre></td></tr></table></figure></p>
+<p>这个18个提示数的数独作为例子作为讲解，我也通过以上流程生成了一个18个提示数的标准数独。</p>
 <blockquote>
 <p>借助书上的书法,除了聪明和运气，我们别无他法。</p>
 </blockquote>
