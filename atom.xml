@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.60points.com/"/>
-  <updated>2019-01-21T13:16:05.817Z</updated>
+  <updated>2019-01-21T15:21:47.986Z</updated>
   <id>https://www.60points.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重绘Panel边框线</title>
+    <link href="https://www.60points.com/%E9%87%8D%E7%BB%98Panel%E8%BE%B9%E6%A1%86%E7%BA%BF/"/>
+    <id>https://www.60points.com/重绘Panel边框线/</id>
+    <published>2019-01-21T14:00:53.000Z</published>
+    <updated>2019-01-21T15:21:47.986Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近有一个需求,是重绘panel边框的颜色成指定的颜色,参考了网上的一些示例代码和结合实际情况,形成了自己的解决方案,以下是实现过程。</p><h1 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h1><h2 id="边框绘制类"><a href="#边框绘制类" class="headerlink" title="边框绘制类"></a>边框绘制类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// panel边框绘制类</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">public static class PanelBorderPainter</span><br><span class="line">&#123;</span><br><span class="line">    private static Color _colorPanelBorder = Color.FromArgb(215, 215, 215); //d7d7d7</span><br><span class="line">    private static int BorderSize = 1;</span><br><span class="line"></span><br><span class="line">    /// &lt;summary&gt;</span><br><span class="line">    /// 重绘panel的边框颜色</span><br><span class="line">    /// &lt;para&gt;Padding 需要设置为1,例如:panel.Padding = new System.Windows.Forms.Padding(1);&lt;/para&gt;</span><br><span class="line">    /// &lt;para&gt;默认颜色值是d7d7d7&lt;/para&gt;</span><br><span class="line">    /// &lt;para&gt;可以通过panel.Tag=Color.FromArgb(255, 0, 0)设置颜色为红色&lt;/para&gt;</span><br><span class="line">    ///&lt;para&gt;注意:该Paint事件应置于InitializeComponent()之后实现,重新生成Designer.cs会导致代码丢失。&lt;/para&gt;</span><br><span class="line">    /// </span><br><span class="line">    /// &lt;/summary&gt;</span><br><span class="line">    /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;</span><br><span class="line">    /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;</span><br><span class="line">    public static void Paint(object sender, PaintEventArgs e)</span><br><span class="line">    &#123;</span><br><span class="line">        if (sender is Control control)</span><br><span class="line">        &#123;</span><br><span class="line">            #region panel颜色信息通过Tag传递</span><br><span class="line"></span><br><span class="line">            if (control.Tag != null)</span><br><span class="line">            &#123;</span><br><span class="line">                if (control.Tag is Color color)</span><br><span class="line">                &#123;</span><br><span class="line">                    _colorPanelBorder = color;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            #endregion</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            ButtonBorderStyle style = ButtonBorderStyle.Solid;</span><br><span class="line">            ControlPaint.DrawBorder(e.Graphics, control.ClientRectangle,</span><br><span class="line">                _colorPanelBorder, BorderSize, style,</span><br><span class="line">                _colorPanelBorder, BorderSize, style,</span><br><span class="line">                _colorPanelBorder, BorderSize, style,</span><br><span class="line">                _colorPanelBorder, BorderSize, style);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="声明两个Panel"><a href="#声明两个Panel" class="headerlink" title="声明两个Panel"></a>声明两个Panel</h2><p><font color="#FF0000">容器panelOuter包含panelInner</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">private System.Windows.Forms.Panel panelOuter;</span><br><span class="line">private System.Windows.Forms.Panel panelInner;</span><br></pre></td></tr></table></figure></p><h2 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h2><p>panelOuter<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.panelOuter.Padding = new System.Windows.Forms.Padding(1); //Padding属性设置为1。</span><br><span class="line">this.panelOuter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) </span><br><span class="line">            | System.Windows.Forms.AnchorStyles.Left) </span><br><span class="line">            | System.Windows.Forms.AnchorStyles.Right)));</span><br><span class="line"> this.panelOuter.Controls.Add(panelInner); //必须</span><br></pre></td></tr></table></figure></p><p>panelInner<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.panelInner.Dock = System.Windows.Forms.DockStyle.Fill;</span><br></pre></td></tr></table></figure></p><p>Form1构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public Form1()</span><br><span class="line">&#123;</span><br><span class="line">    InitializeComponent();</span><br><span class="line">    this.panelOuter.Paint += new PaintEventHandler(PanelBorderPainter.Paint);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="答疑"><a href="#答疑" class="headerlink" title="答疑"></a>答疑</h2><p><font color="#FF0000">为什么需要两个Panel?</font><br>答:因为如果注释掉以下代码,水平拖拽时会出现如下的界面效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.panelOuter.Controls.Add(panelInner);</span><br></pre></td></tr></table></figure></p><p><img src="/重绘Panel边框线/错误重绘示例.png" alt="错误重绘示例">。<br>取消该行代码注释则页面拖拽效果正常。</p><p><font color="#FF0000">是否必须需要两个Panel?</font><br>答:不是,内部是<strong>DataGridView</strong>等控件,其Dock=DockStyle.Fill,可以起到同样的效果。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://blog.csdn.net/softimite_zifeng/article/details/54237134">Winform的Panel绘制边框</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;最近有一个需求,是重绘panel边框的颜色成指定的颜色,参考了网上的一些示例代码和结合实际情况,形成了自己的解决方案,以下是实现过程。&lt;/p&gt;
+&lt;h
+      
+    
+    </summary>
+    
+      <category term="C#" scheme="https://www.60points.com/categories/C/"/>
+    
+      <category term="winform" scheme="https://www.60points.com/categories/C/winform/"/>
+    
+    
+      <category term="winform" scheme="https://www.60points.com/tags/winform/"/>
+    
+      <category term="panel重绘" scheme="https://www.60points.com/tags/panel%E9%87%8D%E7%BB%98/"/>
+    
+  </entry>
   
   <entry>
     <title>用多项式解标准数独或锯齿数独</title>
@@ -509,9 +539,9 @@
       <category term="人工智能" scheme="https://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
     
-      <category term="python" scheme="https://www.60points.com/tags/python/"/>
-    
       <category term="原创" scheme="https://www.60points.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="python" scheme="https://www.60points.com/tags/python/"/>
     
       <category term="手写识别" scheme="https://www.60points.com/tags/%E6%89%8B%E5%86%99%E8%AF%86%E5%88%AB/"/>
     
@@ -539,39 +569,6 @@
     
     
       <category term="简历" scheme="https://www.60points.com/tags/%E7%AE%80%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如无必要,勿增实体</title>
-    <link href="https://www.60points.com/%E5%A6%82%E6%97%A0%E5%BF%85%E8%A6%81%E5%8B%BF%E5%A2%9E%E5%AE%9E%E4%BD%93/"/>
-    <id>https://www.60points.com/如无必要勿增实体/</id>
-    <published>2018-11-08T13:04:50.000Z</published>
-    <updated>2018-11-12T08:06:19.440Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>初次接触到 <strong><a href="https://baike.baidu.com/item/奥卡姆剃刀原理">如无必要,勿增实体</a></strong> 是在《西部世界》这部美剧中,今日早晨我在看<a href="https://baike.baidu.com/item/贝叶斯定理">贝叶斯定理</a>的相关文章的时候,恰巧又温习到这句话，想聊一下该语句是怎么影响我的生活的。</p><h1 id="以往"><a href="#以往" class="headerlink" title="以往"></a>以往</h1><p>参加新的工作以后,很多东西都发生了变化。比如以前是B/S项目，现在是C/S项目。因为B/S的逻辑代码都存在于服务器端,基本上不用考虑源码被不良居心的人使用。而C/S架构存在源码泄露的风险，故需要对产品的Dll做混淆处理。<br>如果要制作一个安装包,避免不了以下这些步骤：</p><ul><li>SVN签出最新代码</li><li>重新生成解决方案</li><li>Release目录内的dll拷贝到混淆工具指定路径</li><li>混淆结果拷贝到安装包制作路径</li><li>生成安装包发布到指定路径</li></ul><p>在window下的tortoisesvn 可视化操作下,选中指定目录签出文件,并不麻烦。<br>在visual studio 2017下,打开几十个项目重新编译通过就有点麻烦，毕竟项目越多,Visual Studio加载越慢。<br>在多个Release目录中,选中指定的待混淆文件拷贝对混淆工具的指定路径是重复低效事件。<br>再将混淆结果拷贝到安装包制作路径再制作安装包是重复低效事件。<br>再将安装包拷贝到阿里云的Ftp服务器是重复低效事件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原目录和目标目录的不断切换,不同工具的开启和调用,整个过程操作下来，顺利则30分钟，不顺利则一个小时。</span><br></pre></td></tr></table></figure></p><p>如果一天做两个不同版本的安装包，一天就一个多小时重复在安装包的制作之上。这并不能体现出我的工作价值。<br>鲁迅先生说过:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无端地空耗别人的时间,其实无异于谋财害命。</span><br></pre></td></tr></table></figure></p><p>若不想被谋财害命,需要作出一些改变。</p><h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><p>若是一年做一次安装包，写一个安装包部署手册就好了。一年之后再制作安装包的时候，参考该部署手册就能很好的解决问题了。<br>但是一周2~3次的安装包制作（不做解释^_^）,一周就有三四个小时用于制作安装包了。<br>《西部世界》好歹是一个机器人的世界,我公司又是做的RPA的产品,怎么自己还在做这种重复低效无意义的事情？  </p><ul><li>SVN可以通过命令行做签入签出的动作。</li><li>Visual Studio 2017 也可以通过命令行执行重新生成解决方案的动作。</li><li>拷贝文件到指定目录的代码网上比比皆是。</li><li>ftp也可以通过命令行执行上传下载文件的动作。</li></ul><p>我能不能制作一个工具,一键就把以上所有实现都给完成了？</p><h1 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h1><p>参考了一些资料，花了几天终于折腾出来了一个发布工具(Ftp命令行这部分未实现)，虽说这个发布并比不上docker的一件部署。<br>但是于我个人而言，却是近期以来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如无必要，勿增实体</span><br></pre></td></tr></table></figure></p><p>的最佳实践，基于此工具,制作一个安装包的时间已经省到一半的时间了,这样也是<strong>惜时如金</strong>的一种表现吧。<br>这个基于Hexo主题的网站搭建也是一个<strong>Do not repeat yourself</strong>的实践,没有试图再去从零开始搭建一个网站框架，创作一个新型的电子垃圾也是迷途知返吧；<br>再引用一句鲁迅的名言<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">总之，我们要拿来。我们要或使用，或存放，或毁灭。  </span><br><span class="line">那么，主人是新主人，宅子也就会成为新宅子。  </span><br><span class="line">然而首先要这人沉着，勇猛，有辨别，不自私。  </span><br><span class="line">没有拿来的，人不能自成为新人，没有拿来的，文艺不能自成为新文艺。</span><br></pre></td></tr></table></figure></p><p><strong>没有拿来的,技术不能自成为新技术</strong>。不需要创造重复的轮子，但是手上也需要有适合自己的工具。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>奥卡姆剃刀原理也好,Dry原则也好,RPA也好,AI也好，甚至西部世界也好都说明了一个道理：<br><strong>人从事重复简单的工作,能带来的是熟练程度的提升，但是在更年轻力壮的人或者机器人面前,他并不具备足够的竞争力。</strong></p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://blog.csdn.net/lixiangminghate/article/details/51350846">使用bat脚本编译VS工程</a></li><li><a href="http://www.cnblogs.com/136asdxxl/p/7410947.html">svn 命令行使用总结</a></li><li><a href="http://www.cnblogs.com/joean/p/4870486.html">C# 如何执行bat文件 传参数</a></li><li><a href="https://blog.csdn.net/qq_18808965/article/details/77882381">如何使用DOS命令通过FTP进行上传和下载</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;初次接触到 &lt;strong&gt;&lt;a href=&quot;https://baike.baidu.com/item/奥卡姆剃刀原理&quot;&gt;如无必要,勿增实体&lt;/a&gt;
-      
-    
-    </summary>
-    
-      <category term="IT经验" scheme="https://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-      <category term="原创" scheme="https://www.60points.com/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="生活感悟" scheme="https://www.60points.com/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
-    
-      <category term="命令行" scheme="https://www.60points.com/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
-    
-      <category term="制作安装包" scheme="https://www.60points.com/tags/%E5%88%B6%E4%BD%9C%E5%AE%89%E8%A3%85%E5%8C%85/"/>
-    
-      <category term="Svn签出" scheme="https://www.60points.com/tags/Svn%E7%AD%BE%E5%87%BA/"/>
     
   </entry>
   
