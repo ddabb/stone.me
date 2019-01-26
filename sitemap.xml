@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.60points.com/sqlserver-to-mysql/</loc>
+    
+    <lastmod>2019-01-26T00:01:07.426Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/</loc>
     
     <lastmod>2019-01-22T01:00:39.247Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://www.60points.com/photos/index.html</loc>
     
     <lastmod>2018-12-28T14:46:54.835Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.60points.com/sqlserver-to-mysql/</loc>
-    
-    <lastmod>2018-12-25T15:25:11.184Z</lastmod>
     
   </url>
   
