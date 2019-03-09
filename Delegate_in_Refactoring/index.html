@@ -110,17 +110,18 @@
 
 
 
-  <meta name="description" content="不接触，不了解 不分享，不成长">
-<meta name="keywords" content="AI,人工智能,Hexo,CRM,.net core">
-<meta property="og:type" content="website">
-<meta property="og:title" content="他山之石">
-<meta property="og:url" content="https://www.60points.com/tags/网站简介/index.html">
+  <meta name="description" content="序最近在工作中的一次重构过程中运用到了委托，记录一下。 场景有一段示例代码如下1234567891011public class ProjectAClass&amp;#123;    public static void CallMethod(bool isTrue)    &amp;#123;        if (isTrue)        &amp;#123;            ProjectB_Static">
+<meta name="keywords" content="重构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="委托在重构中的运用">
+<meta property="og:url" content="https://www.60points.com/Delegate_in_Refactoring/index.html">
 <meta property="og:site_name" content="他山之石">
-<meta property="og:description" content="不接触，不了解 不分享，不成长">
+<meta property="og:description" content="序最近在工作中的一次重构过程中运用到了委托，记录一下。 场景有一段示例代码如下1234567891011public class ProjectAClass&amp;#123;    public static void CallMethod(bool isTrue)    &amp;#123;        if (isTrue)        &amp;#123;            ProjectB_Static">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-09T11:43:34.719Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="他山之石">
-<meta name="twitter:description" content="不接触，不了解 不分享，不成长">
+<meta name="twitter:title" content="委托在重构中的运用">
+<meta name="twitter:description" content="序最近在工作中的一次重构过程中运用到了委托，记录一下。 场景有一段示例代码如下1234567891011public class ProjectAClass&amp;#123;    public static void CallMethod(bool isTrue)    &amp;#123;        if (isTrue)        &amp;#123;            ProjectB_Static">
 
 
 
@@ -129,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="https://www.60points.com/tags/网站简介/">
+  <link rel="canonical" href="https://www.60points.com/Delegate_in_Refactoring/">
 
 
 
@@ -139,7 +140,7 @@
   };
 </script>
 
-  <title>标签: 网站简介 | 他山之石</title>
+  <title>委托在重构中的运用 | 他山之石</title>
   
 
 
@@ -197,7 +198,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -272,7 +273,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -411,88 +412,310 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>网站简介<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.60points.com/Delegate_in_Refactoring/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="stone liu">
+      <meta itemprop="description" content="不接触，不了解 不分享，不成长">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="他山之石">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/index/" itemprop="url">
-              
-                <span itemprop="name">欢迎来到他山之石</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">委托在重构中的运用
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-12T14:09:35+08:00" content="2018-11-12">
-          11-12
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-09 18:49:35 / 修改时间：19:43:34" itemprop="dateCreated datePublished" datetime="2019-03-09T18:49:35+08:00">2019-03-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/C/重构/" itemprop="url" rel="index"><span itemprop="name">重构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近在工作中的一次重构过程中运用到了委托，记录一下。</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>有一段示例代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class ProjectAClass</span><br><span class="line">&#123;</span><br><span class="line">    public static void CallMethod(bool isTrue)</span><br><span class="line">    &#123;</span><br><span class="line">        if (isTrue)</span><br><span class="line">        &#123;</span><br><span class="line">            ProjectB_StaticClass.DoSomething();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>后来因为业务的不断发展，需要把ProjectB从整个解决方法中移除掉。<br>ProjectB_StaticClassB.DoSomething();需要替换成 ProjectC_StaticClassC.DoSomething();<br>但是项目ProjectC需要引用ProjectA，故不能直接进行引用，否则会造成项目之间的循环依赖。  </p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>ProjectAClass添加一个委托事件,CallMethod函数添加一个<strong>Dosometing dosometing</strong>的参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class ProjectAClass</span><br><span class="line">&#123;</span><br><span class="line">    public delegate void Dosometing();</span><br><span class="line"></span><br><span class="line">    public static void CallMethod(bool isTrue, Dosometing dosometing)</span><br><span class="line">    &#123;</span><br><span class="line">        if (isTrue)</span><br><span class="line">        &#123;</span><br><span class="line">            dosometing?.Invoke();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>具体的调用代码处就变成了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ProjectAClass.CallMethod(true,()=&gt;&#123;ProjectC_StaticClassC.DoSomething();&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>若ProjectAClass.CallMethod方法多地方出现，然而没有办法一下修改到位。可以通过参数默认值的方式来实现修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void CallMethod(bool isTrue, Dosometing dosometing=null)</span><br><span class="line">&#123;</span><br><span class="line">    if (isTrue)</span><br><span class="line">    &#123;</span><br><span class="line">        if(dosometing == null)</span><br><span class="line">        &#123;</span><br><span class="line">            ProjectB_StaticClass.DoSomething();</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            dosometing.Invoke(); // or dosometing()</span><br><span class="line">        &#125;         </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>该方法可以避免原来的调用方法进行大面积的修改。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>重构之后的代码ProjectAClass只需要判断条件是否满足，满足则dosometing，而不需要知道dosometing这个委托方法中具体细节。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/gift.jpg" alt="stone liu wechat" style="width: 200px; max-width: 100%;">
+    <div>您的赞赏是我继续努力创作和分享的动力之一</div>
+</div>
+
+      </div>
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="stone liu 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/aipay.png" alt="stone liu 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+       <script src="../lib/jquery/index.js"></script>
+<link href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/social-share.js/1.0.16/js/jquery.share.min.js"></script>
+
+<script> var $config = {
+      url                 : window.location.href,// 网址，默认使用 window.location.href
+      source              : '', // 来源（QQ空间会用到）, 默认读取head标签：<meta name="site" content="http://overtrue" />
+      title               : '', // 标题，默认读取 document.title 或者 <meta name="title" content="share.js" />
+      description         : '', // 描述, 默认读取head标签：<meta name="description" content="PHP弱类型的实现原理分析" />
+      image               : '', // 图片, 默认取网页中第一个img标签
+      sites               : ['qzone', 'qq', 'weibo','wechat'], // 启用的站点
+      disabled            : ['google', 'facebook', 'twitter'], // 禁用的站点
+      wechatQrcodeTitle   : '微信扫一扫：分享', // 微信二维码提示文字
+      wechatQrcodeHelper  : '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
+      target : '_blank' //打开方式
+  };
+  $('.social-share').share($config);
+</script>
+      <div class="social-share"></div>  
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/重构/" rel="tag"><i class="fa fa-tag"></i> 重构</a>
+          
+        </div>
+      
+  
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/games_fun/" rel="next" title="游戏的乐趣">
+                <i class="fa fa-chevron-left"></i> 游戏的乐趣
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9093386396178901",
+    enable_page_level_ads: true
+  });
+</script>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -513,8 +736,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -771,6 +1003,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.1.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">1.2.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.3.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展"><span class="nav-number">1.4.</span> <span class="nav-text">扩展</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -960,6 +1208,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
