@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="他山之石">
 <meta property="og:description" content="序最近在工作中的一次重构过程中运用到了委托，记录一下。 场景有一段示例代码如下1234567891011public class ProjectAClass&amp;#123;    public static void CallMethod(bool isTrue)    &amp;#123;        if (isTrue)        &amp;#123;            ProjectB_Static">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-09T11:43:34.719Z">
+<meta property="og:updated_time" content="2019-03-09T11:49:49.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="委托在重构中的运用">
 <meta name="twitter:description" content="序最近在工作中的一次重构过程中运用到了委托，记录一下。 场景有一段示例代码如下1234567891011public class ProjectAClass&amp;#123;    public static void CallMethod(bool isTrue)    &amp;#123;        if (isTrue)        &amp;#123;            ProjectB_Static">
@@ -475,7 +475,7 @@
                 
               
 
-              <time title="创建时间：2019-03-09 18:49:35 / 修改时间：19:43:34" itemprop="dateCreated datePublished" datetime="2019-03-09T18:49:35+08:00">2019-03-09</time>
+              <time title="创建时间：2019-03-09 18:49:35 / 修改时间：19:49:49" itemprop="dateCreated datePublished" datetime="2019-03-09T18:49:35+08:00">2019-03-09</time>
             
 
             
@@ -575,7 +575,7 @@
       
         <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>最近在工作中的一次重构过程中运用到了委托，记录一下。</p>
 <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>有一段示例代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class ProjectAClass</span><br><span class="line">&#123;</span><br><span class="line">    public static void CallMethod(bool isTrue)</span><br><span class="line">    &#123;</span><br><span class="line">        if (isTrue)</span><br><span class="line">        &#123;</span><br><span class="line">            ProjectB_StaticClass.DoSomething();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>后来因为业务的不断发展，需要把ProjectB从整个解决方法中移除掉。<br>ProjectB_StaticClassB.DoSomething();需要替换成 ProjectC_StaticClassC.DoSomething();<br>但是项目ProjectC需要引用ProjectA，故不能直接进行引用，否则会造成项目之间的循环依赖。  </p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>后来因为业务的不断发展，需要把ProjectB从整个解决方案中移除掉。<br>ProjectB_StaticClassB.DoSomething();需要替换成 ProjectC_StaticClassC.DoSomething();<br>但是项目ProjectC需要引用ProjectA，故不能直接进行引用，否则会造成项目之间的循环依赖。  </p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>ProjectAClass添加一个委托事件,CallMethod函数添加一个<strong>Dosometing dosometing</strong>的参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class ProjectAClass</span><br><span class="line">&#123;</span><br><span class="line">    public delegate void Dosometing();</span><br><span class="line"></span><br><span class="line">    public static void CallMethod(bool isTrue, Dosometing dosometing)</span><br><span class="line">    &#123;</span><br><span class="line">        if (isTrue)</span><br><span class="line">        &#123;</span><br><span class="line">            dosometing?.Invoke();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>具体的调用代码处就变成了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ProjectAClass.CallMethod(true,()=&gt;&#123;ProjectC_StaticClassC.DoSomething();&#125;);</span><br></pre></td></tr></table></figure></p>
 <h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>若ProjectAClass.CallMethod方法多地方出现，然而没有办法一下修改到位。可以通过参数默认值的方式来实现修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void CallMethod(bool isTrue, Dosometing dosometing=null)</span><br><span class="line">&#123;</span><br><span class="line">    if (isTrue)</span><br><span class="line">    &#123;</span><br><span class="line">        if(dosometing == null)</span><br><span class="line">        &#123;</span><br><span class="line">            ProjectB_StaticClass.DoSomething();</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            dosometing.Invoke(); // or dosometing()</span><br><span class="line">        &#125;         </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -686,6 +686,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/Add_Parameter_in_Refactoring/" rel="prev" title="重构技巧之添加参数">
+                重构技巧之添加参数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -761,7 +765,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">48</span>
+                    <span class="site-state-item-count">49</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -941,7 +945,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">62</span>
+                      
+                    
+                    <span class="site-state-item-count">63</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1044,7 +1050,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">124k</span>
+    <span title="站点总字数">127k</span>
   
 
   
@@ -1053,7 +1059,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:56</span>
   
 </div>
 
