@@ -539,9 +539,9 @@
       <category term="数独之趣" scheme="https://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
     
     
-      <category term="hexo" scheme="https://www.60points.com/tags/hexo/"/>
-    
       <category term="数独" scheme="https://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
+    
+      <category term="hexo" scheme="https://www.60points.com/tags/hexo/"/>
     
       <category term="mathjax" scheme="https://www.60points.com/tags/mathjax/"/>
     
