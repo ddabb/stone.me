@@ -5,9 +5,9 @@
   <subtitle>专注于分享的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.60points.com/"/>
+  <link href="http://www.60points.com/"/>
   <updated>2019-05-19T13:27:37.146Z</updated>
-  <id>https://www.60points.com/</id>
+  <id>http://www.60points.com/</id>
   
   <author>
     <name>stone liu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>闲谈权游</title>
-    <link href="https://www.60points.com/%E9%97%B2%E8%B0%88%E6%9D%83%E6%B8%B8/"/>
-    <id>https://www.60points.com/闲谈权游/</id>
+    <link href="http://www.60points.com/%E9%97%B2%E8%B0%88%E6%9D%83%E6%B8%B8/"/>
+    <id>http://www.60points.com/闲谈权游/</id>
     <published>2019-05-18T05:27:11.000Z</published>
     <updated>2019-05-19T13:27:37.146Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+      <category term="生活感悟" scheme="http://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
-      <category term="权利的游戏" scheme="https://www.60points.com/tags/%E6%9D%83%E5%88%A9%E7%9A%84%E6%B8%B8%E6%88%8F/"/>
+      <category term="权利的游戏" scheme="http://www.60points.com/tags/%E6%9D%83%E5%88%A9%E7%9A%84%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
   <entry>
     <title>3月16号UR远足之星溪线</title>
-    <link href="https://www.60points.com/3%E6%9C%8816%E5%8F%B7UR%E8%BF%9C%E8%B6%B3%E4%B9%8B%E6%98%9F%E6%BA%AA%E7%BA%BF/"/>
-    <id>https://www.60points.com/3月16号UR远足之星溪线/</id>
+    <link href="http://www.60points.com/3%E6%9C%8816%E5%8F%B7UR%E8%BF%9C%E8%B6%B3%E4%B9%8B%E6%98%9F%E6%BA%AA%E7%BA%BF/"/>
+    <id>http://www.60points.com/3月16号UR远足之星溪线/</id>
     <published>2019-03-16T13:33:01.000Z</published>
     <updated>2019-03-16T14:43:15.835Z</updated>
     
@@ -59,21 +59,21 @@
     
     </summary>
     
-      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+      <category term="生活感悟" scheme="http://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
-      <category term="远足" scheme="https://www.60points.com/tags/%E8%BF%9C%E8%B6%B3/"/>
+      <category term="远足" scheme="http://www.60points.com/tags/%E8%BF%9C%E8%B6%B3/"/>
     
-      <category term="星溪线" scheme="https://www.60points.com/tags/%E6%98%9F%E6%BA%AA%E7%BA%BF/"/>
+      <category term="星溪线" scheme="http://www.60points.com/tags/%E6%98%9F%E6%BA%AA%E7%BA%BF/"/>
     
-      <category term="UR" scheme="https://www.60points.com/tags/UR/"/>
+      <category term="UR" scheme="http://www.60points.com/tags/UR/"/>
     
   </entry>
   
   <entry>
     <title>重构技巧之添加参数</title>
-    <link href="https://www.60points.com/Add_Parameter_in_Refactoring/"/>
-    <id>https://www.60points.com/Add_Parameter_in_Refactoring/</id>
+    <link href="http://www.60points.com/Add_Parameter_in_Refactoring/"/>
+    <id>http://www.60points.com/Add_Parameter_in_Refactoring/</id>
     <published>2019-03-10T01:32:02.000Z</published>
     <updated>2019-03-10T02:34:30.116Z</updated>
     
@@ -88,21 +88,21 @@
     
     </summary>
     
-      <category term="C#" scheme="https://www.60points.com/categories/C/"/>
+      <category term="C#" scheme="http://www.60points.com/categories/C/"/>
     
-      <category term="重构" scheme="https://www.60points.com/categories/C/%E9%87%8D%E6%9E%84/"/>
+      <category term="重构" scheme="http://www.60points.com/categories/C/%E9%87%8D%E6%9E%84/"/>
     
     
-      <category term="重构" scheme="https://www.60points.com/tags/%E9%87%8D%E6%9E%84/"/>
+      <category term="重构" scheme="http://www.60points.com/tags/%E9%87%8D%E6%9E%84/"/>
     
-      <category term="TreeView" scheme="https://www.60points.com/tags/TreeView/"/>
+      <category term="TreeView" scheme="http://www.60points.com/tags/TreeView/"/>
     
   </entry>
   
   <entry>
     <title>委托在重构中的运用</title>
-    <link href="https://www.60points.com/Delegate_in_Refactoring/"/>
-    <id>https://www.60points.com/Delegate_in_Refactoring/</id>
+    <link href="http://www.60points.com/Delegate_in_Refactoring/"/>
+    <id>http://www.60points.com/Delegate_in_Refactoring/</id>
     <published>2019-03-09T10:49:35.000Z</published>
     <updated>2019-03-09T11:49:49.966Z</updated>
     
@@ -118,19 +118,19 @@
     
     </summary>
     
-      <category term="C#" scheme="https://www.60points.com/categories/C/"/>
+      <category term="C#" scheme="http://www.60points.com/categories/C/"/>
     
-      <category term="重构" scheme="https://www.60points.com/categories/C/%E9%87%8D%E6%9E%84/"/>
+      <category term="重构" scheme="http://www.60points.com/categories/C/%E9%87%8D%E6%9E%84/"/>
     
     
-      <category term="重构" scheme="https://www.60points.com/tags/%E9%87%8D%E6%9E%84/"/>
+      <category term="重构" scheme="http://www.60points.com/tags/%E9%87%8D%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>游戏的乐趣</title>
-    <link href="https://www.60points.com/games_fun/"/>
-    <id>https://www.60points.com/games_fun/</id>
+    <link href="http://www.60points.com/games_fun/"/>
+    <id>http://www.60points.com/games_fun/</id>
     <published>2019-02-24T11:23:50.000Z</published>
     <updated>2019-02-24T13:16:29.685Z</updated>
     
@@ -145,19 +145,19 @@
     
     </summary>
     
-      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+      <category term="生活感悟" scheme="http://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
-      <category term="乐趣" scheme="https://www.60points.com/tags/%E4%B9%90%E8%B6%A3/"/>
+      <category term="乐趣" scheme="http://www.60points.com/tags/%E4%B9%90%E8%B6%A3/"/>
     
-      <category term="新鲜感" scheme="https://www.60points.com/tags/%E6%96%B0%E9%B2%9C%E6%84%9F/"/>
+      <category term="新鲜感" scheme="http://www.60points.com/tags/%E6%96%B0%E9%B2%9C%E6%84%9F/"/>
     
   </entry>
   
   <entry>
     <title>见珠江女子落水有感</title>
-    <link href="https://www.60points.com/%E8%A7%81%E7%8F%A0%E6%B1%9F%E5%A5%B3%E5%AD%90%E8%90%BD%E6%B0%B4%E6%9C%89%E6%84%9F/"/>
-    <id>https://www.60points.com/见珠江女子落水有感/</id>
+    <link href="http://www.60points.com/%E8%A7%81%E7%8F%A0%E6%B1%9F%E5%A5%B3%E5%AD%90%E8%90%BD%E6%B0%B4%E6%9C%89%E6%84%9F/"/>
+    <id>http://www.60points.com/见珠江女子落水有感/</id>
     <published>2019-02-20T13:06:08.000Z</published>
     <updated>2019-02-20T14:00:18.662Z</updated>
     
@@ -172,19 +172,19 @@
     
     </summary>
     
-      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+      <category term="生活感悟" scheme="http://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
-      <category term="尊重" scheme="https://www.60points.com/tags/%E5%B0%8A%E9%87%8D/"/>
+      <category term="尊重" scheme="http://www.60points.com/tags/%E5%B0%8A%E9%87%8D/"/>
     
-      <category term="沟通" scheme="https://www.60points.com/tags/%E6%B2%9F%E9%80%9A/"/>
+      <category term="沟通" scheme="http://www.60points.com/tags/%E6%B2%9F%E9%80%9A/"/>
     
   </entry>
   
   <entry>
     <title>不堪一击</title>
-    <link href="https://www.60points.com/%E4%B8%8D%E5%A0%AA%E4%B8%80%E5%87%BB/"/>
-    <id>https://www.60points.com/不堪一击/</id>
+    <link href="http://www.60points.com/%E4%B8%8D%E5%A0%AA%E4%B8%80%E5%87%BB/"/>
+    <id>http://www.60points.com/不堪一击/</id>
     <published>2019-02-14T22:45:24.000Z</published>
     <updated>2019-02-14T22:47:56.062Z</updated>
     
@@ -200,17 +200,17 @@
     
     </summary>
     
-      <category term="打油诗" scheme="https://www.60points.com/categories/%E6%89%93%E6%B2%B9%E8%AF%97/"/>
+      <category term="打油诗" scheme="http://www.60points.com/categories/%E6%89%93%E6%B2%B9%E8%AF%97/"/>
     
     
-      <category term="藏字" scheme="https://www.60points.com/tags/%E8%97%8F%E5%AD%97/"/>
+      <category term="藏字" scheme="http://www.60points.com/tags/%E8%97%8F%E5%AD%97/"/>
     
   </entry>
   
   <entry>
     <title>镜花水月</title>
-    <link href="https://www.60points.com/%E9%95%9C%E8%8A%B1%E6%B0%B4%E6%9C%88/"/>
-    <id>https://www.60points.com/镜花水月/</id>
+    <link href="http://www.60points.com/%E9%95%9C%E8%8A%B1%E6%B0%B4%E6%9C%88/"/>
+    <id>http://www.60points.com/镜花水月/</id>
     <published>2019-02-14T14:31:29.000Z</published>
     <updated>2019-02-14T14:37:34.314Z</updated>
     
@@ -226,17 +226,17 @@
     
     </summary>
     
-      <category term="打油诗" scheme="https://www.60points.com/categories/%E6%89%93%E6%B2%B9%E8%AF%97/"/>
+      <category term="打油诗" scheme="http://www.60points.com/categories/%E6%89%93%E6%B2%B9%E8%AF%97/"/>
     
     
-      <category term="藏字" scheme="https://www.60points.com/tags/%E8%97%8F%E5%AD%97/"/>
+      <category term="藏字" scheme="http://www.60points.com/tags/%E8%97%8F%E5%AD%97/"/>
     
   </entry>
   
   <entry>
     <title>2019年规划</title>
-    <link href="https://www.60points.com/2019_plan/"/>
-    <id>https://www.60points.com/2019_plan/</id>
+    <link href="http://www.60points.com/2019_plan/"/>
+    <id>http://www.60points.com/2019_plan/</id>
     <published>2019-02-14T13:32:23.000Z</published>
     <updated>2019-02-14T14:01:48.030Z</updated>
     
@@ -251,17 +251,17 @@
     
     </summary>
     
-      <category term="生活规划" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E8%A7%84%E5%88%92/"/>
+      <category term="生活规划" scheme="http://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E8%A7%84%E5%88%92/"/>
     
     
-      <category term="生活" scheme="https://www.60points.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://www.60points.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>用Dictionary替换switch case的注意事项</title>
-    <link href="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/"/>
-    <id>https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/</id>
+    <link href="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/"/>
+    <id>http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/</id>
     <published>2019-01-21T15:40:18.000Z</published>
     <updated>2019-01-22T01:00:39.247Z</updated>
     
@@ -277,21 +277,21 @@
     
     </summary>
     
-      <category term="C#" scheme="https://www.60points.com/categories/C/"/>
+      <category term="C#" scheme="http://www.60points.com/categories/C/"/>
     
-      <category term="重构" scheme="https://www.60points.com/categories/C/%E9%87%8D%E6%9E%84/"/>
+      <category term="重构" scheme="http://www.60points.com/categories/C/%E9%87%8D%E6%9E%84/"/>
     
     
-      <category term="重构" scheme="https://www.60points.com/tags/%E9%87%8D%E6%9E%84/"/>
+      <category term="重构" scheme="http://www.60points.com/tags/%E9%87%8D%E6%9E%84/"/>
     
-      <category term="Dictionary" scheme="https://www.60points.com/tags/Dictionary/"/>
+      <category term="Dictionary" scheme="http://www.60points.com/tags/Dictionary/"/>
     
   </entry>
   
   <entry>
     <title>重绘Panel边框线</title>
-    <link href="https://www.60points.com/Paint_Panel_Border/"/>
-    <id>https://www.60points.com/Paint_Panel_Border/</id>
+    <link href="http://www.60points.com/Paint_Panel_Border/"/>
+    <id>http://www.60points.com/Paint_Panel_Border/</id>
     <published>2019-01-21T14:00:53.000Z</published>
     <updated>2019-01-21T15:27:11.234Z</updated>
     
@@ -307,21 +307,21 @@
     
     </summary>
     
-      <category term="C#" scheme="https://www.60points.com/categories/C/"/>
+      <category term="C#" scheme="http://www.60points.com/categories/C/"/>
     
-      <category term="winform" scheme="https://www.60points.com/categories/C/winform/"/>
+      <category term="winform" scheme="http://www.60points.com/categories/C/winform/"/>
     
     
-      <category term="winform" scheme="https://www.60points.com/tags/winform/"/>
+      <category term="winform" scheme="http://www.60points.com/tags/winform/"/>
     
-      <category term="panel重绘" scheme="https://www.60points.com/tags/panel%E9%87%8D%E7%BB%98/"/>
+      <category term="panel重绘" scheme="http://www.60points.com/tags/panel%E9%87%8D%E7%BB%98/"/>
     
   </entry>
   
   <entry>
     <title>用多项式解标准数独或锯齿数独</title>
-    <link href="https://www.60points.com/Solve_Soduku_With_Polynomial/"/>
-    <id>https://www.60points.com/Solve_Soduku_With_Polynomial/</id>
+    <link href="http://www.60points.com/Solve_Soduku_With_Polynomial/"/>
+    <id>http://www.60points.com/Solve_Soduku_With_Polynomial/</id>
     <published>2019-01-13T14:06:50.000Z</published>
     <updated>2019-01-21T13:16:05.817Z</updated>
     
@@ -337,19 +337,19 @@
     
     </summary>
     
-      <category term="数独之趣" scheme="https://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
+      <category term="数独之趣" scheme="http://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
     
     
-      <category term="数独" scheme="https://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
+      <category term="数独" scheme="http://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
-      <category term="python" scheme="https://www.60points.com/tags/python/"/>
+      <category term="python" scheme="http://www.60points.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>迟到的元旦快乐</title>
-    <link href="https://www.60points.com/ComfirmedPostionSodukuClues/"/>
-    <id>https://www.60points.com/ComfirmedPostionSodukuClues/</id>
+    <link href="http://www.60points.com/ComfirmedPostionSodukuClues/"/>
+    <id>http://www.60points.com/ComfirmedPostionSodukuClues/</id>
     <published>2019-01-10T13:15:08.000Z</published>
     <updated>2019-01-10T16:01:29.619Z</updated>
     
@@ -365,21 +365,21 @@
     
     </summary>
     
-      <category term="数独之趣" scheme="https://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
+      <category term="数独之趣" scheme="http://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
     
     
-      <category term="排列组合" scheme="https://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
+      <category term="排列组合" scheme="http://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
     
-      <category term="数独" scheme="https://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
+      <category term="数独" scheme="http://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
-      <category term="固定位置" scheme="https://www.60points.com/tags/%E5%9B%BA%E5%AE%9A%E4%BD%8D%E7%BD%AE/"/>
+      <category term="固定位置" scheme="http://www.60points.com/tags/%E5%9B%BA%E5%AE%9A%E4%BD%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>SqlServer 迁移到mysql</title>
-    <link href="https://www.60points.com/sqlserver-to-mysql/"/>
-    <id>https://www.60points.com/sqlserver-to-mysql/</id>
+    <link href="http://www.60points.com/sqlserver-to-mysql/"/>
+    <id>http://www.60points.com/sqlserver-to-mysql/</id>
     <published>2018-12-25T13:56:21.000Z</published>
     <updated>2019-01-26T00:01:07.426Z</updated>
     
@@ -395,21 +395,21 @@
     
     </summary>
     
-      <category term="IT经验" scheme="https://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/"/>
+      <category term="IT经验" scheme="http://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/"/>
     
-      <category term="数据库迁移" scheme="https://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"/>
+      <category term="数据库迁移" scheme="http://www.60points.com/categories/IT%E7%BB%8F%E9%AA%8C/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/"/>
     
     
-      <category term="mysql" scheme="https://www.60points.com/tags/mysql/"/>
+      <category term="mysql" scheme="http://www.60points.com/tags/mysql/"/>
     
-      <category term="sqlserver" scheme="https://www.60points.com/tags/sqlserver/"/>
+      <category term="sqlserver" scheme="http://www.60points.com/tags/sqlserver/"/>
     
   </entry>
   
   <entry>
     <title>2018年总结</title>
-    <link href="https://www.60points.com/2018%E5%B9%B4%E6%80%BB%E7%BB%93/"/>
-    <id>https://www.60points.com/2018年总结/</id>
+    <link href="http://www.60points.com/2018%E5%B9%B4%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.60points.com/2018年总结/</id>
     <published>2018-12-23T11:40:29.000Z</published>
     <updated>2018-12-23T15:25:09.891Z</updated>
     
@@ -425,17 +425,17 @@
     
     </summary>
     
-      <category term="生活感悟" scheme="https://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
+      <category term="生活感悟" scheme="http://www.60points.com/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"/>
     
     
-      <category term="总结" scheme="https://www.60points.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="http://www.60points.com/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>构造20个提示数的标准数独</title>
-    <link href="https://www.60points.com/make_an_twenty_clues_soduku/"/>
-    <id>https://www.60points.com/make_an_twenty_clues_soduku/</id>
+    <link href="http://www.60points.com/make_an_twenty_clues_soduku/"/>
+    <id>http://www.60points.com/make_an_twenty_clues_soduku/</id>
     <published>2018-12-21T13:19:16.000Z</published>
     <updated>2019-01-10T14:48:04.617Z</updated>
     
@@ -450,17 +450,17 @@
     
     </summary>
     
-      <category term="数独之趣" scheme="https://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
+      <category term="数独之趣" scheme="http://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
     
     
-      <category term="数独" scheme="https://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
+      <category term="数独" scheme="http://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
   </entry>
   
   <entry>
     <title>斗地主所有牌型组合个数统计</title>
-    <link href="https://www.60points.com/138712181744994/"/>
-    <id>https://www.60points.com/138712181744994/</id>
+    <link href="http://www.60points.com/138712181744994/"/>
+    <id>http://www.60points.com/138712181744994/</id>
     <published>2018-12-03T13:48:23.000Z</published>
     <updated>2018-12-06T16:10:24.562Z</updated>
     
@@ -475,21 +475,21 @@
     
     </summary>
     
-      <category term="逻辑思维" scheme="https://www.60points.com/categories/%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4/"/>
+      <category term="逻辑思维" scheme="http://www.60points.com/categories/%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4/"/>
     
     
-      <category term="欢乐斗地主" scheme="https://www.60points.com/tags/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/"/>
+      <category term="欢乐斗地主" scheme="http://www.60points.com/tags/%E6%AC%A2%E4%B9%90%E6%96%97%E5%9C%B0%E4%B8%BB/"/>
     
-      <category term="排列组合" scheme="https://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
+      <category term="排列组合" scheme="http://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
     
-      <category term="138712181744994" scheme="https://www.60points.com/tags/138712181744994/"/>
+      <category term="138712181744994" scheme="http://www.60points.com/tags/138712181744994/"/>
     
   </entry>
   
   <entry>
     <title>m个球放到n个箱子中几种解法</title>
-    <link href="https://www.60points.com/combination/"/>
-    <id>https://www.60points.com/combination/</id>
+    <link href="http://www.60points.com/combination/"/>
+    <id>http://www.60points.com/combination/</id>
     <published>2018-11-29T14:23:23.000Z</published>
     <updated>2018-11-30T00:22:57.288Z</updated>
     
@@ -504,19 +504,19 @@
     
     </summary>
     
-      <category term="逻辑思维" scheme="https://www.60points.com/categories/%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4/"/>
+      <category term="逻辑思维" scheme="http://www.60points.com/categories/%E9%80%BB%E8%BE%91%E6%80%9D%E7%BB%B4/"/>
     
     
-      <category term="排列组合" scheme="https://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
+      <category term="排列组合" scheme="http://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
     
-      <category term="不同颜色" scheme="https://www.60points.com/tags/%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2/"/>
+      <category term="不同颜色" scheme="http://www.60points.com/tags/%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2/"/>
     
   </entry>
   
   <entry>
     <title>python画爱心</title>
-    <link href="https://www.60points.com/python-print-heart/"/>
-    <id>https://www.60points.com/python-print-heart/</id>
+    <link href="http://www.60points.com/python-print-heart/"/>
+    <id>http://www.60points.com/python-print-heart/</id>
     <published>2018-11-26T12:57:46.000Z</published>
     <updated>2018-11-26T13:43:42.180Z</updated>
     
@@ -531,21 +531,21 @@
     
     </summary>
     
-      <category term="python" scheme="https://www.60points.com/categories/python/"/>
+      <category term="python" scheme="http://www.60points.com/categories/python/"/>
     
     
-      <category term="python" scheme="https://www.60points.com/tags/python/"/>
+      <category term="python" scheme="http://www.60points.com/tags/python/"/>
     
-      <category term="画爱心" scheme="https://www.60points.com/tags/%E7%94%BB%E7%88%B1%E5%BF%83/"/>
+      <category term="画爱心" scheme="http://www.60points.com/tags/%E7%94%BB%E7%88%B1%E5%BF%83/"/>
     
-      <category term="hello world" scheme="https://www.60points.com/tags/hello-world/"/>
+      <category term="hello world" scheme="http://www.60points.com/tags/hello-world/"/>
     
   </entry>
   
   <entry>
     <title>手写数独教程</title>
-    <link href="https://www.60points.com/handwrite-soduku/"/>
-    <id>https://www.60points.com/handwrite-soduku/</id>
+    <link href="http://www.60points.com/handwrite-soduku/"/>
+    <id>http://www.60points.com/handwrite-soduku/</id>
     <published>2018-11-25T03:14:42.000Z</published>
     <updated>2019-01-10T14:48:35.301Z</updated>
     
@@ -561,14 +561,14 @@
     
     </summary>
     
-      <category term="数独之趣" scheme="https://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
+      <category term="数独之趣" scheme="http://www.60points.com/categories/%E6%95%B0%E7%8B%AC%E4%B9%8B%E8%B6%A3/"/>
     
     
-      <category term="数独" scheme="https://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
+      <category term="数独" scheme="http://www.60points.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
-      <category term="hexo" scheme="https://www.60points.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.60points.com/tags/hexo/"/>
     
-      <category term="mathjax" scheme="https://www.60points.com/tags/mathjax/"/>
+      <category term="mathjax" scheme="http://www.60points.com/tags/mathjax/"/>
     
   </entry>
   

@@ -114,18 +114,18 @@
 <meta name="keywords" content="重构,Dictionary">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Dictionary替换switch case的注意事项">
-<meta property="og:url" content="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/index.html">
+<meta property="og:url" content="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/index.html">
 <meta property="og:site_name" content="他山之石">
 <meta property="og:description" content="序最近试图重构一段现做现卖的祖传代码,结果改完之后,性能急速下降,下面给出示意代码的截图,以便提醒自己工作需要更加认真和细心。   示例代码错误的重构Dictionary的执行时间竟然是Switch case的四倍以上？原因是啥？我们来看一下各个动物的构造函数即生成Dictionary的每一个键值对的值的时候,都实例化了一个Animal的子类,每个子类的实例化都等待了十秒钟,总实例化就耗费了40秒">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/差异对比.png">
-<meta property="og:image" content="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/构造函数.png">
-<meta property="og:image" content="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/正确重构.png">
+<meta property="og:image" content="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/差异对比.png">
+<meta property="og:image" content="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/构造函数.png">
+<meta property="og:image" content="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/正确重构.png">
 <meta property="og:updated_time" content="2019-01-22T01:00:39.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Dictionary替换switch case的注意事项">
 <meta name="twitter:description" content="序最近试图重构一段现做现卖的祖传代码,结果改完之后,性能急速下降,下面给出示意代码的截图,以便提醒自己工作需要更加认真和细心。   示例代码错误的重构Dictionary的执行时间竟然是Switch case的四倍以上？原因是啥？我们来看一下各个动物的构造函数即生成Dictionary的每一个键值对的值的时候,都实例化了一个Animal的子类,每个子类的实例化都等待了十秒钟,总实例化就耗费了40秒">
-<meta name="twitter:image" content="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/差异对比.png">
+<meta name="twitter:image" content="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/差异对比.png">
 
 
 
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/">
+  <link rel="canonical" href="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/">
 
 
 
@@ -436,7 +436,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/">
+    <link itemprop="mainEntityOfPage" href="http://www.60points.com/Notes_On_Switch_Convert_to_Dictionary/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="stone liu">
