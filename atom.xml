@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.60points.com/"/>
-  <updated>2019-08-03T08:05:10.721Z</updated>
+  <updated>2019-11-24T22:08:01.460Z</updated>
   <id>http://www.60points.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>相亲小记</title>
+    <link href="http://www.60points.com/%E7%9B%B8%E4%BA%B2%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://www.60points.com/相亲小记/</id>
+    <published>2019-11-24T22:08:01.000Z</published>
+    <updated>2019-11-24T22:08:01.460Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href=""></a></li><li><a href=""></a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>红颜蓝颜</title>
@@ -539,35 +564,6 @@
       <category term="排列组合" scheme="http://www.60points.com/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/"/>
     
       <category term="不同颜色" scheme="http://www.60points.com/tags/%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python画爱心</title>
-    <link href="http://www.60points.com/python-print-heart/"/>
-    <id>http://www.60points.com/python-print-heart/</id>
-    <published>2018-11-26T12:57:46.000Z</published>
-    <updated>2018-11-26T13:43:42.180Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>该文算是python版的”Hello world”初探，故作相关的记录。<br>环境准备:Visual Studio 2017,python</p><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="爱心一"><a href="#爱心一" class="headerlink" title="爱心一"></a>爱心一</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">x_coords = np.linspace(- 100, 100, 500)</span><br><span class="line">y_coords = np.linspace(- 100, 100, 500)</span><br><span class="line">points = []</span><br><span class="line"></span><br><span class="line">for y in y_coords:</span><br><span class="line"> for x in x_coords:</span><br><span class="line">    if((x* 0.03)** 2+(y* 0.03)** 2- 1)** 3-(x* 0.03)** 2*(y* 0.03)** 3&lt;= 0:</span><br><span class="line">       points.append(&#123; &quot;x&quot;: x, &quot;y&quot;: y&#125;)</span><br><span class="line"></span><br><span class="line">heart_x = list(map( lambda point: point[ &quot;x&quot;], points))</span><br><span class="line">heart_y = list(map( lambda point: point[ &quot;y&quot;], points))</span><br><span class="line"></span><br><span class="line">plt.scatter(heart_x, heart_y, s= 10, alpha= 0.5)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p>效果如图<br><img src="/python-print-heart/heart1.png" alt="爱心1">  </p><h2 id="爱心二"><a href="#爱心二" class="headerlink" title="爱心二"></a>爱心二</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line"> </span><br><span class="line">import turtle</span><br><span class="line">import time</span><br><span class="line"> </span><br><span class="line"># 画心形圆弧</span><br><span class="line">def hart_arc():</span><br><span class="line">    for i in range(200):</span><br><span class="line">        turtle.right(1)</span><br><span class="line">        turtle.forward(2)</span><br><span class="line"> </span><br><span class="line">def move_pen_position(x, y):</span><br><span class="line">    turtle.hideturtle()     # 隐藏画笔（先）</span><br><span class="line">    turtle.up()     # 提笔</span><br><span class="line">    turtle.goto(x, y)    # 移动画笔到指定起始坐标（窗口中心为0,0）</span><br><span class="line">    turtle.down()   # 下笔</span><br><span class="line">    turtle.showturtle()     # 显示画笔</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#love = input(&quot;请输入表白话语，默认为‘I Love You’：&quot;)</span><br><span class="line">#signature = input(&quot;请签署你的大名，不填写默认不显示：&quot;)</span><br><span class="line"></span><br><span class="line">signature= &apos;&apos;</span><br><span class="line">love = &apos;I Love You&apos;</span><br><span class="line"></span><br><span class="line">if love == &apos;&apos;:</span><br><span class="line">    love = &apos;I Love You&apos;</span><br><span class="line"> </span><br><span class="line"># 初始化</span><br><span class="line">turtle.setup(width=800, height=500)     # 窗口（画布）大小</span><br><span class="line">turtle.color(&apos;red&apos;, &apos;pink&apos;)     # 画笔颜色</span><br><span class="line">turtle.pensize(3)       # 画笔粗细</span><br><span class="line">turtle.speed(1)     # 描绘速度</span><br><span class="line"># 初始化画笔起始坐标</span><br><span class="line">move_pen_position(x=0,y=-180)   # 移动画笔位置</span><br><span class="line">turtle.left(140)    # 向左旋转140度</span><br><span class="line"> </span><br><span class="line">turtle.begin_fill()     # 标记背景填充位置</span><br><span class="line"> </span><br><span class="line"># 画心形直线（ 左下方 ）</span><br><span class="line">turtle.forward(224)    # 向前移动画笔，长度为224</span><br><span class="line"># 画爱心圆弧</span><br><span class="line">hart_arc()      # 左侧圆弧</span><br><span class="line">turtle.left(120)    # 调整画笔角度</span><br><span class="line">hart_arc()      # 右侧圆弧</span><br><span class="line"># 画心形直线（ 右下方 ）</span><br><span class="line">turtle.forward(224)</span><br><span class="line"> </span><br><span class="line">turtle.end_fill()       # 标记背景填充结束位置</span><br><span class="line"> </span><br><span class="line"># 在心形中写上表白话语</span><br><span class="line">move_pen_position(0,0)      # 表白语位置</span><br><span class="line">turtle.hideturtle()     # 隐藏画笔</span><br><span class="line">turtle.color(&apos;#CD5C5C&apos;, &apos;pink&apos;)      # 字体颜色</span><br><span class="line"># font:设定字体、尺寸（电脑下存在的字体都可设置）  align:中心对齐</span><br><span class="line">turtle.write(love, font=(&apos;Arial&apos;, 30, &apos;bold&apos;), align=&quot;center&quot;)</span><br><span class="line"> </span><br><span class="line"># 签写署名</span><br><span class="line">if signature != &apos;&apos;:</span><br><span class="line">    turtle.color(&apos;red&apos;, &apos;pink&apos;)</span><br><span class="line">    time.sleep(2)</span><br><span class="line">    move_pen_position(180, -180)</span><br><span class="line">    turtle.hideturtle()  # 隐藏画笔</span><br><span class="line">    turtle.write(signature, font=(&apos;Arial&apos;, 20), align=&quot;center&quot;)</span><br><span class="line"> </span><br><span class="line"># 点击窗口关闭程序</span><br><span class="line">window = turtle.Screen()</span><br><span class="line">window.exitonclick()</span><br></pre></td></tr></table></figure><p>效果如下图<br><img src="/python-print-heart/heart2.png" alt="爱心2">  </p><h2 id="爱心三"><a href="#爱心三" class="headerlink" title="爱心三"></a>爱心三</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from matplotlib.font_manager import FontProperties</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">x=np.linspace(-2,2,200)</span><br><span class="line">y1 =np.sqrt(1-np.square(np.fabs(x)-1))</span><br><span class="line">y2 =np.arccos(1-np.fabs(x))-np.pi</span><br><span class="line"></span><br><span class="line">plt.plot(x,y1,&apos;r&apos;,x,y2,&apos;r&apos;)</span><br><span class="line">plt.axis([-2.5,2.5,-3.5,1.5])</span><br><span class="line"></span><br><span class="line">plt.title(&apos;hello world of python,copy from @andrew&apos;,fontsize=16)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p>效果如下图<br><img src="/python-print-heart/heart3.png" alt="爱心3">  </p><h1 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h1><p><strong>在visual studio 2017中命令行执行 pip install numpy 无效</strong><br>在nuget程序包管理器控制台执行即可<br><strong>pip install pyinstaller之后生成的exe无法执行</strong><br>在我电脑上的路径是<strong>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\Scripts</strong>,<br>把run.py拷贝到该目录,执行<strong>pyinstaller -F -W p . run.py</strong>解决问题</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="/python-print-heart/hurt.png" alt="暴击"></p><hr><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://cloud.tencent.com/developer/news/216095">520情人节，用python画个爱心送给你的那个她！</a></li><li><a href="https://www.taitaiblog.com/1314.html">七夕将至，教你用Python绘制爱心，优雅的表白520~</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;该文算是python版的”Hello world”初探，故作相关的记录。&lt;br&gt;环境准备:Visual Studio 2017,python&lt;/p&gt;
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://www.60points.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://www.60points.com/tags/python/"/>
-    
-      <category term="画爱心" scheme="http://www.60points.com/tags/%E7%94%BB%E7%88%B1%E5%BF%83/"/>
-    
-      <category term="hello world" scheme="http://www.60points.com/tags/hello-world/"/>
     
   </entry>
   
